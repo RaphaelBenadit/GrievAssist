@@ -1,0 +1,501 @@
+﻿description,roads,lighting,water,garbage,traffic,fire,drainage,rainwater,priority
+standing water attracting mosquitoes not cleaned for a week,0,0,0,0,0,0,0,1,High
+plastic waste thrown near road totally ignored by workers,0,0,0,1,0,0,0,0,High
+rainwater logging in street unsafe for kids,0,0,0,0,0,0,0,1,Medium
+water tank overflow behind my house,0,0,1,0,0,0,0,0,Medium
+transformer caught fire after rain totally ignored by workers,0,0,0,0,0,1,0,0,Medium
+streetlights not working near park urgent attention needed,0,1,0,0,0,0,0,0,Low
+electrical pole caught fire suddenly causing problem to public,0,0,0,0,0,1,0,0,Medium
+standing water attracting mosquitoes pls fix soon,0,0,0,0,0,0,0,1,Low
+park flooded due to heavy rain everyday issue,0,0,0,0,0,0,0,1,Low
+flyover construction causing traffic jams pls fix soon,1,1,0,0,0,0,0,0,Low
+no traffic police during rush hour pls fix soon,0,0,0,0,1,0,0,0,Medium
+no traffic police during rush hour near my home,0,0,0,0,1,0,0,0,Low
+drainage blocked causing mosquito problem,0,0,0,0,0,0,1,0,Medium
+dead animal lying on street not cleaned for a week,0,0,0,1,0,0,0,0,High
+water pipe leaking near school unsafe for kids,0,0,1,0,0,0,0,0,Medium
+vehicles parked illegally blocking road not cleaned for a week,0,0,0,0,1,0,0,0,Low
+transformer sparks near lamppost unsafe for kids,0,1,0,0,0,0,0,0,Low
+smoke seen from nearby building not cleaned for a week,0,0,0,0,0,1,0,0,High
+potholes on the road making travel dangerous it smells really bad,1,0,0,0,0,0,0,1,Medium
+no traffic police during rush hour near my home,0,0,0,0,1,0,0,0,High
+smoke seen from nearby building near my home,0,0,0,0,0,1,0,0,Low
+flyover construction causing traffic jams not cleaned for a week,1,1,0,0,0,0,0,0,High
+bulb fused near temple street not cleaned for a week,0,1,0,0,0,0,0,0,Medium
+transformer caught fire after rain pls fix soon,0,0,0,1,0,1,0,0,Medium
+heavy congestion near school area,1,0,0,0,1,0,0,0,Medium
+low water pressure in entire colony near my home,0,0,1,0,0,0,0,0,High
+heavy congestion near school area causing problem to public,0,0,0,0,1,0,0,0,High
+plastic waste thrown near road near my home,0,0,0,1,0,0,0,0,Low
+rainwater not draining properly totally ignored by workers,0,0,0,0,0,0,0,1,Medium
+water tank overflow behind my house it smells really bad,0,0,1,0,0,0,0,0,Low
+transformer sparks near lamppost totally ignored by workers,0,1,0,0,0,0,0,0,Medium
+drain overflowing near house,0,0,0,0,0,0,1,0,Low
+low water pressure in entire colony causing problem to public,0,0,1,0,0,0,0,0,Medium
+signal timer too short causing jam not cleaned for a week,0,0,0,0,1,0,0,0,Medium
+dead animal lying on street causing problem to public,0,0,0,1,0,0,0,0,Medium
+drainage blocked causing mosquito problem it smells really bad,0,0,0,0,0,0,1,0,High
+water tank overflow behind my house urgent attention needed,0,0,1,0,0,0,0,0,Medium
+fire accident near market due to short circuit totally ignored by workers,0,0,0,0,0,1,0,0,Medium
+broken drain cover outside colony not cleaned for a week,0,0,0,0,0,0,1,0,Medium
+signal timer too short causing jam totally ignored by workers,0,0,1,0,1,0,0,0,Medium
+transformer sparks near lamppost causing problem to public,0,1,0,0,0,0,0,0,Low
+water entered houses after rain pls fix soon,0,0,0,0,0,0,0,1,Low
+bulb fused near temple street urgent attention needed,0,1,0,0,0,0,0,0,Medium
+sewage water spreading bad smell urgent attention needed,0,0,0,0,0,0,1,0,Medium
+rainwater logging in street totally ignored by workers,0,0,0,0,0,0,0,1,Medium
+drain overflowing near house,0,0,0,0,0,0,1,0,High
+open manhole on the street totally ignored by workers,0,0,1,0,0,0,1,0,High
+rainwater logging in street totally ignored by workers,0,0,0,0,0,0,0,1,Low
+flickering lights creating unsafe environment pls fix soon,0,1,0,0,0,0,0,0,Low
+water pipe leaking near school everyday issue,0,0,1,0,0,0,0,0,High
+people dumping garbage in open area pls fix soon,0,0,0,1,0,0,0,0,Medium
+broken drain cover outside colony everyday issue,0,0,0,0,0,0,1,0,High
+bulb fused near temple street everyday issue,0,1,0,0,0,0,0,0,Medium
+open manhole on the street pls fix soon,0,0,0,0,0,0,1,0,Medium
+burning smell from garbage dump near my home,0,0,0,0,0,1,0,0,High
+plastic waste thrown near road totally ignored by workers,0,0,0,1,0,0,0,0,Low
+vehicles parked illegally blocking road causing problem to public,0,0,0,0,1,0,0,0,Low
+burning smell from garbage dump causing problem to public,0,0,0,0,0,1,0,0,Medium
+garbage not collected for 4 days not cleaned for a week,0,0,0,1,0,1,0,0,High
+water entered houses after rain unsafe for kids,0,0,0,0,0,0,0,1,Low
+streetlights not working near park,0,1,0,0,0,0,0,0,Low
+standing water attracting mosquitoes not cleaned for a week,0,0,0,0,0,1,0,1,Low
+streetlights not working near park it smells really bad,0,1,0,0,0,0,0,0,Medium
+flickering lights creating unsafe environment totally ignored by workers,0,1,0,0,0,0,0,0,Low
+dead animal lying on street not cleaned for a week,0,0,0,1,0,0,0,0,Low
+open manhole on the street near my home,1,0,0,0,0,0,1,0,Medium
+open manhole on the street causing problem to public,0,0,0,0,0,0,1,0,Medium
+flyover construction causing traffic jams it smells really bad,1,0,1,0,0,0,0,0,High
+flickering lights creating unsafe environment near my home,0,1,0,0,0,0,0,0,High
+traffic signal not working at main junction,0,0,0,0,1,0,1,0,Medium
+potholes on the road making travel dangerous near my home,1,0,0,0,0,0,0,0,Medium
+potholes on the road making travel dangerous unsafe for kids,1,0,0,0,1,0,0,0,Medium
+signal timer too short causing jam urgent attention needed,0,0,0,0,1,0,0,0,High
+park flooded due to heavy rain it smells really bad,0,0,0,0,0,0,0,1,High
+smoke seen from nearby building urgent attention needed,0,0,0,0,0,1,0,0,Medium
+low water pressure in entire colony near my home,0,0,1,0,0,0,0,0,Medium
+dead animal lying on street near my home,1,0,0,1,0,0,0,0,Low
+rainwater not draining properly unsafe for kids,0,0,0,0,0,0,0,1,Low
+traffic signal not working at main junction it smells really bad,0,0,0,0,1,0,0,0,High
+rainwater logging in street everyday issue,0,0,0,0,1,0,0,1,High
+water pipe leaking near school urgent attention needed,0,0,1,0,0,0,0,0,Medium
+standing water attracting mosquitoes totally ignored by workers,0,0,0,0,0,0,0,1,Medium
+sewage water spreading bad smell not cleaned for a week,0,0,0,0,1,0,1,0,High
+fire accident near market due to short circuit,0,0,0,0,0,1,0,0,High
+vehicles parked illegally blocking road totally ignored by workers,0,0,0,0,1,0,0,0,Low
+park flooded due to heavy rain urgent attention needed,0,0,0,0,0,0,0,1,High
+flickering lights creating unsafe environment near my home,0,1,0,0,0,0,0,0,High
+main road broken near market area pls fix soon,1,0,0,0,0,0,0,0,Medium
+people dumping garbage in open area urgent attention needed,0,0,0,1,0,0,0,0,High
+open manhole on the street urgent attention needed,0,0,0,0,0,0,1,0,High
+garbage not collected for 4 days pls fix soon,0,0,0,1,0,0,0,0,Medium
+people dumping garbage in open area totally ignored by workers,0,0,0,1,0,0,0,0,Medium
+rainwater not draining properly causing problem to public,0,0,1,0,0,0,0,1,High
+water tank overflow behind my house unsafe for kids,0,0,1,1,0,0,0,0,Low
+fire accident near market due to short circuit it smells really bad,0,0,0,0,0,1,0,0,High
+rainwater logging in street pls fix soon,0,0,0,0,0,0,0,1,Low
+broken drain cover outside colony not cleaned for a week,0,0,0,0,0,0,1,0,Medium
+vehicles parked illegally blocking road not cleaned for a week,0,1,0,0,1,0,0,0,High
+people dumping garbage in open area near my home,0,0,0,1,0,0,0,0,Medium
+heavy congestion near school area,0,0,0,1,1,0,0,0,Medium
+dead animal lying on street pls fix soon,0,0,0,1,0,0,0,0,Medium
+plastic waste thrown near road it smells really bad,0,0,0,1,0,0,0,0,High
+water tank overflow behind my house everyday issue,0,0,1,0,0,0,0,0,High
+broken drain cover outside colony near my home,0,0,0,0,0,0,1,0,Low
+street completely dark after evening pls fix soon,0,1,1,0,0,0,0,0,Low
+fire accident near market due to short circuit not cleaned for a week,0,0,0,0,0,1,0,1,Low
+plastic waste thrown near road unsafe for kids,0,0,0,1,0,0,0,0,High
+standing water attracting mosquitoes everyday issue,0,0,0,0,0,0,0,1,Medium
+water entered houses after rain pls fix soon,0,0,0,0,0,0,0,1,High
+water tank overflow behind my house,0,0,1,0,0,0,0,0,Medium
+vehicles parked illegally blocking road not cleaned for a week,0,0,0,0,1,1,0,0,High
+overflowing dustbin near playground,0,0,0,1,0,0,0,0,Medium
+water entered houses after rain pls fix soon,0,0,0,0,0,0,0,1,Low
+people dumping garbage in open area everyday issue,1,0,0,1,0,0,0,0,High
+fire accident near market due to short circuit urgent attention needed,0,0,0,1,0,1,0,0,High
+no traffic police during rush hour unsafe for kids,0,0,0,0,1,0,0,0,High
+overflowing dustbin near playground near my home,0,0,0,1,0,0,0,0,Low
+rainwater logging in street totally ignored by workers,1,0,0,0,0,0,0,1,Medium
+street dug up and left unattended not cleaned for a week,1,0,0,0,0,0,0,0,Low
+bulb fused near temple street urgent attention needed,0,1,0,0,0,0,0,0,Medium
+main road broken near market area it smells really bad,1,0,0,0,0,0,0,0,Low
+main road broken near market area urgent attention needed,1,0,0,0,0,0,0,0,High
+streetlights not working near park everyday issue,0,1,0,0,0,0,0,0,High
+smoke seen from nearby building not cleaned for a week,0,0,0,0,1,1,0,0,High
+heavy congestion near school area urgent attention needed,0,0,1,0,1,0,0,0,Low
+water entered houses after rain not cleaned for a week,0,0,0,0,0,0,0,1,Medium
+open manhole on the street not cleaned for a week,0,0,0,0,0,0,1,0,Medium
+flyover construction causing traffic jams,1,0,0,0,0,0,0,0,Medium
+traffic signal not working at main junction everyday issue,0,0,0,0,1,0,0,0,High
+bulb fused near temple street everyday issue,0,1,0,0,0,1,0,0,Medium
+rainwater logging in street totally ignored by workers,0,0,0,0,0,0,0,1,Low
+overflowing dustbin near playground urgent attention needed,0,0,0,1,0,0,1,0,High
+people dumping garbage in open area near my home,0,0,0,1,0,0,1,0,High
+flyover construction causing traffic jams totally ignored by workers,1,0,0,0,0,0,0,0,Medium
+rainwater logging in street everyday issue,1,0,0,0,0,0,0,1,High
+sewage water spreading bad smell near my home,0,0,0,0,0,0,1,0,Medium
+flyover construction causing traffic jams unsafe for kids,1,0,0,0,0,0,0,0,Low
+water tank overflow behind my house everyday issue,0,0,1,0,0,0,0,0,Low
+water entered houses after rain urgent attention needed,0,0,0,0,0,0,0,1,Low
+no traffic police during rush hour everyday issue,0,0,0,0,1,1,0,0,High
+no drinking water supply since morning urgent attention needed,0,0,1,0,0,0,0,0,Low
+burning smell from garbage dump everyday issue,0,0,0,0,0,1,0,0,Medium
+open manhole on the street it smells really bad,0,0,0,0,0,0,1,0,Medium
+plastic waste thrown near road,0,0,0,1,0,0,0,0,High
+park flooded due to heavy rain pls fix soon,0,0,0,0,0,0,0,1,High
+road divider damaged and needs fixing unsafe for kids,1,0,0,0,0,0,0,0,High
+plastic waste thrown near road totally ignored by workers,0,0,0,1,0,0,0,0,Low
+main road broken near market area pls fix soon,1,0,0,0,0,0,0,0,Medium
+standing water attracting mosquitoes urgent attention needed,0,0,1,0,0,0,0,1,Low
+street dug up and left unattended near my home,1,0,0,0,0,0,1,0,Low
+open manhole on the street it smells really bad,0,0,0,0,0,0,1,0,Medium
+traffic signal not working at main junction it smells really bad,0,0,0,0,1,0,0,0,Low
+fire accident near market due to short circuit pls fix soon,0,0,0,0,0,1,0,0,Low
+plastic waste thrown near road causing problem to public,0,0,0,1,0,0,0,0,Medium
+transformer caught fire after rain not cleaned for a week,0,0,0,0,0,1,0,0,High
+drainage blocked causing mosquito problem,0,0,0,0,0,0,1,0,High
+water entered houses after rain everyday issue,0,0,0,0,0,0,0,1,Low
+no traffic police during rush hour it smells really bad,0,0,0,0,1,0,0,0,Medium
+flyover construction causing traffic jams everyday issue,1,0,0,0,0,0,0,0,High
+open manhole on the street it smells really bad,0,0,0,0,0,0,1,0,High
+standing water attracting mosquitoes,0,0,0,0,0,0,0,1,High
+smoke seen from nearby building everyday issue,0,0,1,0,0,1,0,0,Low
+electrical pole caught fire suddenly not cleaned for a week,0,1,0,0,0,1,0,0,Medium
+no drinking water supply since morning everyday issue,0,0,1,0,0,0,0,0,Low
+drain overflowing near house it smells really bad,0,0,0,0,0,1,1,0,Low
+sewage water spreading bad smell totally ignored by workers,0,1,0,0,0,0,1,0,Medium
+electrical pole caught fire suddenly urgent attention needed,0,1,0,0,0,1,0,0,Low
+flickering lights creating unsafe environment it smells really bad,0,1,0,0,0,0,0,0,High
+potholes on the road making travel dangerous,1,0,0,0,0,0,0,0,High
+garbage not collected for 4 days urgent attention needed,0,0,0,1,0,0,0,0,Medium
+road divider damaged and needs fixing totally ignored by workers,1,0,0,0,0,0,0,0,Low
+main road broken near market area urgent attention needed,1,0,0,0,0,0,0,0,Medium
+electrical pole caught fire suddenly pls fix soon,0,0,0,0,0,1,0,0,Low
+no drinking water supply since morning near my home,0,0,1,0,0,0,0,0,Medium
+transformer sparks near lamppost everyday issue,0,1,1,0,0,0,0,0,Low
+vehicles parked illegally blocking road totally ignored by workers,0,0,0,0,1,0,0,0,Medium
+streetlights not working near park,0,1,0,0,0,0,0,0,High
+traffic signal not working at main junction causing problem to public,0,0,0,0,1,0,1,0,Medium
+potholes on the road making travel dangerous near my home,1,0,0,0,0,0,0,0,High
+smoke seen from nearby building everyday issue,0,0,0,0,0,1,0,0,High
+streetlights not working near park unsafe for kids,0,1,0,0,0,0,0,0,Low
+garbage not collected for 4 days totally ignored by workers,0,0,0,1,0,0,0,0,High
+electrical pole caught fire suddenly,0,0,0,0,0,1,0,0,Medium
+burning smell from garbage dump,0,0,0,0,0,1,0,0,High
+sewage water spreading bad smell urgent attention needed,0,0,0,0,0,0,1,0,High
+main road broken near market area unsafe for kids,1,0,0,0,0,0,0,0,Medium
+traffic signal not working at main junction not cleaned for a week,0,0,0,0,1,0,0,0,Low
+people dumping garbage in open area totally ignored by workers,0,0,0,1,0,0,0,0,High
+water pipe leaking near school pls fix soon,0,0,1,0,0,0,0,0,Medium
+streetlights not working near park unsafe for kids,0,1,0,0,0,0,0,0,Low
+burning smell from garbage dump totally ignored by workers,0,0,0,0,0,1,0,0,High
+plastic waste thrown near road pls fix soon,0,0,0,1,0,0,0,0,Medium
+people dumping garbage in open area it smells really bad,0,0,0,1,0,0,0,0,High
+overflowing dustbin near playground pls fix soon,0,0,0,1,0,0,0,0,Medium
+no traffic police during rush hour not cleaned for a week,0,0,0,0,1,0,0,0,Medium
+burning smell from garbage dump pls fix soon,0,0,0,0,0,1,0,0,Low
+streetlights not working near park totally ignored by workers,0,1,0,0,0,0,0,0,Low
+low water pressure in entire colony it smells really bad,0,0,1,0,0,0,0,0,Medium
+drain overflowing near house causing problem to public,0,0,0,0,0,0,1,0,Low
+smoke seen from nearby building everyday issue,0,0,0,0,1,1,0,0,Low
+vehicles parked illegally blocking road causing problem to public,0,0,0,0,1,0,0,0,Medium
+flickering lights creating unsafe environment pls fix soon,0,1,0,0,0,0,0,0,Medium
+sewage water spreading bad smell unsafe for kids,0,0,0,0,0,0,1,0,Medium
+water pipe leaking near school urgent attention needed,0,0,1,0,0,0,0,0,Medium
+streetlights not working near park unsafe for kids,0,1,0,0,0,0,0,0,Medium
+standing water attracting mosquitoes everyday issue,0,0,0,0,0,0,0,1,High
+electrical pole caught fire suddenly not cleaned for a week,0,0,0,0,0,1,0,0,High
+main road broken near market area unsafe for kids,1,0,0,0,0,0,0,0,Medium
+overflowing dustbin near playground,0,0,0,1,0,0,0,0,High
+transformer caught fire after rain pls fix soon,0,0,0,0,0,1,0,0,Medium
+potholes on the road making travel dangerous urgent attention needed,1,0,0,0,0,0,0,0,Medium
+street completely dark after evening,0,1,0,0,0,0,0,0,Low
+garbage not collected for 4 days pls fix soon,0,0,0,1,0,0,0,0,High
+broken drain cover outside colony causing problem to public,0,0,0,0,0,0,1,0,High
+plastic waste thrown near road not cleaned for a week,0,0,0,1,0,0,0,0,Low
+heavy congestion near school area urgent attention needed,0,0,0,0,1,0,0,0,Medium
+low water pressure in entire colony totally ignored by workers,0,0,1,0,0,0,0,0,High
+burning smell from garbage dump causing problem to public,0,0,0,0,0,1,0,0,Medium
+drain overflowing near house unsafe for kids,0,0,0,0,0,0,1,0,Medium
+flyover construction causing traffic jams,1,0,0,0,0,0,0,0,High
+people dumping garbage in open area near my home,0,0,0,1,0,0,0,0,Low
+broken drain cover outside colony not cleaned for a week,0,0,0,0,0,0,1,0,High
+overflowing dustbin near playground everyday issue,0,0,0,1,0,0,0,0,High
+rainwater not draining properly,0,1,0,0,0,0,0,1,High
+potholes on the road making travel dangerous near my home,1,0,0,0,0,0,0,0,High
+smoke seen from nearby building,0,0,0,0,0,1,0,0,Medium
+rainwater not draining properly urgent attention needed,0,0,0,0,0,0,0,1,Medium
+fire accident near market due to short circuit not cleaned for a week,0,0,0,0,0,1,0,0,Low
+low water pressure in entire colony causing problem to public,0,0,1,0,0,0,0,0,Medium
+no traffic police during rush hour totally ignored by workers,0,0,0,0,1,0,0,0,Medium
+dead animal lying on street causing problem to public,0,0,0,1,0,0,0,1,Medium
+traffic signal not working at main junction near my home,0,0,0,0,1,0,0,0,Low
+broken drain cover outside colony pls fix soon,0,0,0,0,0,0,1,0,Medium
+main road broken near market area unsafe for kids,1,0,0,0,0,0,0,0,Medium
+streetlights not working near park not cleaned for a week,0,1,0,0,0,0,0,0,Medium
+rainwater logging in street not cleaned for a week,1,0,0,0,0,0,0,1,High
+street dug up and left unattended,1,0,0,0,0,0,0,0,Medium
+flyover construction causing traffic jams unsafe for kids,1,0,0,0,0,0,0,0,Low
+people dumping garbage in open area,0,0,0,1,0,0,0,0,Low
+people dumping garbage in open area everyday issue,0,0,0,1,0,0,0,0,Low
+low water pressure in entire colony urgent attention needed,0,1,1,0,0,0,0,0,Low
+road divider damaged and needs fixing pls fix soon,1,0,0,0,0,0,0,0,Low
+water pipe leaking near school pls fix soon,0,0,1,0,0,0,0,0,High
+sewage water spreading bad smell urgent attention needed,0,0,0,0,0,0,1,0,High
+heavy congestion near school area causing problem to public,0,0,0,0,1,0,0,0,Medium
+traffic signal not working at main junction causing problem to public,0,0,0,0,1,0,0,0,Medium
+flyover construction causing traffic jams causing problem to public,1,0,0,0,0,0,0,0,Medium
+streetlights not working near park pls fix soon,0,1,0,0,0,0,0,0,High
+standing water attracting mosquitoes not cleaned for a week,0,0,0,0,0,0,0,1,High
+rainwater logging in street not cleaned for a week,0,0,0,0,0,0,0,1,Medium
+heavy congestion near school area everyday issue,0,0,0,0,1,0,0,0,Medium
+burning smell from garbage dump it smells really bad,0,0,0,0,0,1,0,0,Low
+tap water dirty and smells bad urgent attention needed,0,0,1,0,0,0,0,0,Medium
+standing water attracting mosquitoes,0,0,0,0,0,0,0,1,Low
+flyover construction causing traffic jams pls fix soon,1,0,0,0,0,0,0,0,Medium
+potholes on the road making travel dangerous pls fix soon,1,1,0,0,0,0,0,0,High
+drainage blocked causing mosquito problem near my home,0,0,0,0,0,0,1,0,High
+traffic signal not working at main junction,0,0,0,0,1,0,0,0,Medium
+drainage blocked causing mosquito problem it smells really bad,0,0,0,0,0,0,1,0,Low
+smoke seen from nearby building pls fix soon,0,0,0,0,0,1,0,0,Low
+street dug up and left unattended pls fix soon,1,0,0,0,0,0,0,0,Medium
+street completely dark after evening unsafe for kids,0,1,0,0,0,1,0,0,Low
+main road broken near market area unsafe for kids,1,0,0,0,0,0,0,0,Low
+park flooded due to heavy rain not cleaned for a week,0,0,0,0,0,0,0,1,High
+park flooded due to heavy rain unsafe for kids,1,0,0,0,0,0,0,1,High
+fire accident near market due to short circuit causing problem to public,0,0,0,0,0,1,0,0,High
+people dumping garbage in open area causing problem to public,0,0,0,1,0,0,0,0,Medium
+water entered houses after rain unsafe for kids,0,0,0,0,0,0,0,1,Low
+low water pressure in entire colony,0,0,1,0,0,0,0,0,High
+tap water dirty and smells bad unsafe for kids,0,0,1,0,0,0,0,0,High
+drainage blocked causing mosquito problem totally ignored by workers,0,0,0,0,0,0,1,0,Medium
+street completely dark after evening near my home,0,1,0,0,0,0,0,0,High
+dead animal lying on street it smells really bad,0,0,0,1,0,0,0,1,Medium
+no drinking water supply since morning causing problem to public,0,0,1,0,0,0,0,0,High
+fire accident near market due to short circuit urgent attention needed,0,0,0,0,0,1,0,0,High
+road divider damaged and needs fixing near my home,1,0,0,0,0,0,0,0,Medium
+street dug up and left unattended causing problem to public,1,0,0,0,0,0,0,0,High
+vehicles parked illegally blocking road urgent attention needed,0,0,0,0,1,0,0,0,High
+drainage blocked causing mosquito problem everyday issue,0,0,0,0,0,0,1,0,Medium
+drain overflowing near house causing problem to public,0,0,0,0,0,0,1,0,Medium
+plastic waste thrown near road causing problem to public,0,0,0,1,0,0,1,0,Low
+heavy congestion near school area,0,0,0,0,1,0,0,0,High
+drain overflowing near house totally ignored by workers,0,0,1,0,0,0,1,0,Medium
+signal timer too short causing jam unsafe for kids,0,0,0,0,1,0,0,0,Medium
+smoke seen from nearby building,0,0,0,0,0,1,0,0,Low
+drain overflowing near house everyday issue,0,0,0,0,0,0,1,0,Medium
+heavy congestion near school area near my home,0,0,0,0,1,0,0,0,Low
+rainwater logging in street unsafe for kids,0,0,0,0,0,0,0,1,Low
+signal timer too short causing jam not cleaned for a week,0,0,0,0,1,0,0,0,Medium
+sewage water spreading bad smell unsafe for kids,0,0,0,0,0,0,1,0,Low
+burning smell from garbage dump totally ignored by workers,0,0,0,0,0,1,0,0,High
+rainwater logging in street near my home,0,0,0,0,0,0,0,1,Medium
+low water pressure in entire colony not cleaned for a week,0,0,1,0,0,0,0,0,Medium
+traffic signal not working at main junction totally ignored by workers,0,0,0,0,1,0,0,0,Medium
+electrical pole caught fire suddenly,0,0,0,1,0,1,0,0,Medium
+overflowing dustbin near playground it smells really bad,0,0,0,1,0,0,0,0,Low
+signal timer too short causing jam totally ignored by workers,0,0,0,0,1,0,0,0,Medium
+signal timer too short causing jam it smells really bad,0,0,0,0,1,0,0,0,Medium
+burning smell from garbage dump,0,0,0,0,0,1,0,0,High
+transformer sparks near lamppost not cleaned for a week,0,1,0,0,0,0,0,0,High
+street completely dark after evening causing problem to public,0,1,0,0,0,0,0,0,Low
+rainwater not draining properly urgent attention needed,0,0,0,0,0,0,0,1,High
+no traffic police during rush hour pls fix soon,0,0,0,0,1,0,0,0,Medium
+traffic signal not working at main junction urgent attention needed,0,0,0,0,1,0,0,0,High
+no traffic police during rush hour it smells really bad,0,0,0,0,1,0,0,0,Medium
+no drinking water supply since morning pls fix soon,0,0,1,0,0,0,0,0,Medium
+water entered houses after rain totally ignored by workers,0,0,0,0,0,0,0,1,Low
+standing water attracting mosquitoes near my home,0,0,0,0,0,0,0,1,Low
+transformer sparks near lamppost pls fix soon,0,1,1,0,0,0,0,0,Medium
+drainage blocked causing mosquito problem unsafe for kids,0,0,0,0,0,0,1,0,Medium
+garbage not collected for 4 days causing problem to public,0,0,0,1,0,0,0,0,Medium
+vehicles parked illegally blocking road pls fix soon,0,0,0,0,1,0,0,0,Low
+rainwater not draining properly,0,0,0,0,0,0,0,1,Medium
+rainwater not draining properly not cleaned for a week,0,0,0,0,0,0,0,1,Medium
+drainage blocked causing mosquito problem everyday issue,0,0,0,0,0,0,1,0,High
+potholes on the road making travel dangerous causing problem to public,1,0,0,0,0,0,0,0,Medium
+drain overflowing near house,0,0,0,0,0,0,1,0,Low
+transformer caught fire after rain everyday issue,0,0,0,0,0,1,0,0,High
+bulb fused near temple street pls fix soon,0,1,0,0,0,0,0,0,Medium
+rainwater not draining properly everyday issue,0,0,0,0,0,0,0,1,High
+fire accident near market due to short circuit causing problem to public,0,0,0,0,0,1,0,0,Low
+park flooded due to heavy rain,0,0,0,0,0,0,0,1,Low
+traffic signal not working at main junction near my home,0,0,0,0,1,0,0,0,Low
+sewage water spreading bad smell,0,0,0,0,0,0,1,0,Medium
+no drinking water supply since morning near my home,0,0,1,0,0,0,0,0,High
+signal timer too short causing jam totally ignored by workers,0,0,0,0,1,0,0,0,Low
+street dug up and left unattended everyday issue,1,0,0,0,0,0,0,0,High
+low water pressure in entire colony pls fix soon,0,0,1,0,0,0,0,0,High
+water pipe leaking near school,0,0,1,0,0,0,0,0,Medium
+sewage water spreading bad smell,0,0,0,1,0,0,1,0,Medium
+traffic signal not working at main junction everyday issue,0,0,1,0,1,0,0,0,Low
+people dumping garbage in open area everyday issue,0,0,0,1,0,0,0,0,High
+road divider damaged and needs fixing causing problem to public,1,0,0,0,0,0,0,0,Medium
+flickering lights creating unsafe environment urgent attention needed,0,1,0,0,0,0,0,0,Medium
+open manhole on the street not cleaned for a week,0,0,0,0,0,0,1,1,Medium
+garbage not collected for 4 days unsafe for kids,0,0,0,1,0,0,0,0,High
+plastic waste thrown near road,0,0,0,1,0,0,0,0,Low
+street completely dark after evening pls fix soon,0,1,0,0,0,0,0,0,Low
+fire accident near market due to short circuit totally ignored by workers,0,0,0,0,0,1,0,0,High
+traffic signal not working at main junction near my home,0,0,0,0,1,0,0,0,High
+plastic waste thrown near road near my home,0,0,0,1,0,0,0,0,Medium
+standing water attracting mosquitoes urgent attention needed,0,0,0,0,0,0,0,1,Low
+main road broken near market area unsafe for kids,1,0,0,0,0,0,0,0,Low
+people dumping garbage in open area,0,0,0,1,0,0,0,0,Low
+tap water dirty and smells bad causing problem to public,0,0,1,0,0,0,0,0,Medium
+water tank overflow behind my house it smells really bad,0,0,1,0,1,0,0,0,Low
+dead animal lying on street,0,0,0,1,0,0,0,0,Medium
+park flooded due to heavy rain totally ignored by workers,0,0,0,0,0,0,0,1,Medium
+transformer caught fire after rain pls fix soon,0,0,0,0,0,1,0,0,Medium
+no drinking water supply since morning everyday issue,0,0,1,0,0,0,0,0,High
+tap water dirty and smells bad pls fix soon,0,0,1,0,0,0,0,0,Medium
+flyover construction causing traffic jams causing problem to public,1,0,0,0,0,0,0,0,High
+electrical pole caught fire suddenly near my home,0,0,0,0,0,1,0,1,Medium
+street dug up and left unattended,1,0,0,0,0,0,0,0,High
+bulb fused near temple street unsafe for kids,0,1,0,0,0,0,0,0,Low
+water pipe leaking near school unsafe for kids,0,0,1,0,0,0,0,0,High
+water pipe leaking near school unsafe for kids,0,0,1,0,0,0,0,0,Low
+smoke seen from nearby building not cleaned for a week,0,0,0,0,0,1,0,0,Medium
+electrical pole caught fire suddenly totally ignored by workers,0,0,0,0,0,1,0,0,Medium
+standing water attracting mosquitoes near my home,0,0,0,0,0,1,0,1,High
+rainwater not draining properly urgent attention needed,0,0,0,1,0,0,0,1,Low
+road divider damaged and needs fixing it smells really bad,1,0,0,0,1,0,0,0,Medium
+plastic waste thrown near road everyday issue,0,0,0,1,0,0,0,0,Medium
+standing water attracting mosquitoes,0,0,0,0,0,0,0,1,High
+heavy congestion near school area,0,0,0,0,1,0,0,0,Low
+water entered houses after rain unsafe for kids,0,0,0,0,1,0,0,1,Low
+transformer sparks near lamppost,0,1,0,0,0,0,0,0,Low
+people dumping garbage in open area,0,0,0,1,0,0,0,0,Medium
+streetlights not working near park,0,1,0,0,0,0,0,0,Low
+electrical pole caught fire suddenly causing problem to public,0,1,0,0,0,1,0,0,Medium
+electrical pole caught fire suddenly,0,0,0,0,0,1,0,0,High
+fire accident near market due to short circuit pls fix soon,0,0,0,0,0,1,0,0,Medium
+smoke seen from nearby building,0,0,0,0,0,1,0,0,Low
+people dumping garbage in open area not cleaned for a week,0,0,0,1,0,0,0,0,Medium
+drainage blocked causing mosquito problem,0,0,0,0,0,0,1,0,Low
+flickering lights creating unsafe environment pls fix soon,0,1,0,0,0,0,0,0,High
+burning smell from garbage dump everyday issue,0,0,0,0,0,1,0,0,Low
+standing water attracting mosquitoes not cleaned for a week,0,0,0,0,0,0,0,1,Medium
+tap water dirty and smells bad urgent attention needed,0,0,1,0,0,0,0,0,High
+water pipe leaking near school pls fix soon,0,0,1,0,0,0,0,0,Medium
+water tank overflow behind my house not cleaned for a week,0,0,1,0,0,0,1,0,Medium
+flyover construction causing traffic jams pls fix soon,1,0,0,0,0,0,0,0,Medium
+rainwater logging in street near my home,0,0,0,0,0,0,0,1,High
+no drinking water supply since morning unsafe for kids,0,0,1,0,0,0,0,0,Medium
+sewage water spreading bad smell not cleaned for a week,0,0,0,0,0,0,1,0,Medium
+dead animal lying on street near my home,0,0,0,1,0,0,0,0,High
+low water pressure in entire colony pls fix soon,0,0,1,0,0,0,0,0,Medium
+low water pressure in entire colony causing problem to public,0,0,1,0,0,0,1,0,High
+heavy congestion near school area near my home,0,0,0,0,1,0,0,0,High
+water pipe leaking near school unsafe for kids,0,0,1,0,0,0,0,0,Medium
+water pipe leaking near school totally ignored by workers,0,0,1,0,1,0,0,0,High
+overflowing dustbin near playground everyday issue,0,0,0,1,0,0,0,0,High
+electrical pole caught fire suddenly unsafe for kids,0,0,0,0,1,1,0,0,Low
+dead animal lying on street,0,0,0,1,0,0,0,0,Low
+flyover construction causing traffic jams near my home,1,0,0,0,0,0,0,0,Low
+rainwater not draining properly pls fix soon,0,0,0,0,0,0,0,1,Low
+burning smell from garbage dump everyday issue,0,0,0,0,0,1,0,0,Medium
+traffic signal not working at main junction pls fix soon,0,1,0,0,1,0,0,0,Low
+streetlights not working near park causing problem to public,0,1,0,0,0,0,0,0,High
+no drinking water supply since morning totally ignored by workers,0,0,1,0,0,0,0,0,High
+transformer sparks near lamppost everyday issue,0,1,0,0,0,0,0,0,High
+no drinking water supply since morning urgent attention needed,0,0,1,0,0,0,0,0,Medium
+water tank overflow behind my house totally ignored by workers,0,0,1,0,0,0,0,0,Low
+sewage water spreading bad smell not cleaned for a week,0,0,0,0,0,0,1,0,High
+water pipe leaking near school it smells really bad,0,0,1,0,0,0,0,0,High
+road divider damaged and needs fixing causing problem to public,1,0,0,0,0,0,0,0,Medium
+no traffic police during rush hour urgent attention needed,0,0,0,0,1,0,0,0,High
+water entered houses after rain urgent attention needed,0,0,0,0,0,0,0,1,Low
+sewage water spreading bad smell totally ignored by workers,0,0,0,0,0,0,1,0,Medium
+drain overflowing near house urgent attention needed,0,0,0,0,0,0,1,0,Medium
+low water pressure in entire colony totally ignored by workers,0,0,1,0,0,0,0,0,High
+signal timer too short causing jam not cleaned for a week,0,0,1,0,1,0,0,0,High
+road divider damaged and needs fixing pls fix soon,1,0,0,0,0,0,0,0,High
+tap water dirty and smells bad not cleaned for a week,0,0,1,0,0,0,0,0,Low
+heavy congestion near school area it smells really bad,0,0,0,0,1,0,0,1,Low
+broken drain cover outside colony not cleaned for a week,0,0,0,1,0,0,1,0,Medium
+no traffic police during rush hour totally ignored by workers,0,0,0,0,1,0,0,0,Medium
+potholes on the road making travel dangerous totally ignored by workers,1,0,0,0,0,0,0,0,Low
+water entered houses after rain causing problem to public,0,0,0,0,0,0,0,1,High
+water entered houses after rain unsafe for kids,0,0,0,0,0,0,0,1,High
+standing water attracting mosquitoes it smells really bad,0,0,0,0,0,0,0,1,Medium
+vehicles parked illegally blocking road unsafe for kids,0,0,0,0,1,0,0,0,Medium
+transformer sparks near lamppost totally ignored by workers,0,1,0,0,0,0,0,0,Medium
+drain overflowing near house not cleaned for a week,0,0,0,0,0,0,1,1,Low
+electrical pole caught fire suddenly everyday issue,0,0,0,0,0,1,0,0,Low
+fire accident near market due to short circuit,0,0,1,0,0,1,0,0,Medium
+signal timer too short causing jam causing problem to public,0,1,0,0,1,0,0,0,Medium
+dead animal lying on street causing problem to public,0,0,0,1,0,0,0,0,Medium
+people dumping garbage in open area causing problem to public,0,0,0,1,0,0,0,0,Low
+street completely dark after evening it smells really bad,0,1,0,0,0,0,0,0,Low
+open manhole on the street,0,0,0,0,0,0,1,0,High
+people dumping garbage in open area everyday issue,0,0,0,1,0,0,0,0,Medium
+burning smell from garbage dump near my home,1,0,0,0,0,1,0,0,Low
+rainwater not draining properly pls fix soon,0,0,0,0,0,0,0,1,Low
+no traffic police during rush hour near my home,0,0,0,0,1,0,0,0,High
+flyover construction causing traffic jams near my home,1,0,0,0,0,0,0,0,Medium
+no traffic police during rush hour,0,0,0,0,1,0,0,0,Low
+flyover construction causing traffic jams totally ignored by workers,1,0,0,0,0,0,0,0,Medium
+electrical pole caught fire suddenly pls fix soon,0,0,0,0,0,1,0,0,Medium
+flickering lights creating unsafe environment,0,1,0,0,0,0,0,0,Medium
+standing water attracting mosquitoes near my home,0,0,0,0,0,0,0,1,Medium
+tap water dirty and smells bad everyday issue,0,0,1,0,0,0,1,0,Medium
+fire accident near market due to short circuit,0,0,0,0,0,1,0,0,High
+transformer sparks near lamppost causing problem to public,0,1,0,0,0,0,0,0,Medium
+low water pressure in entire colony totally ignored by workers,0,0,1,1,0,0,0,0,Medium
+rainwater not draining properly causing problem to public,0,0,0,0,0,0,0,1,Low
+road divider damaged and needs fixing causing problem to public,1,0,0,0,0,0,0,0,High
+low water pressure in entire colony causing problem to public,0,0,1,0,0,0,0,0,Low
+street completely dark after evening it smells really bad,0,1,0,0,0,0,0,0,Low
+park flooded due to heavy rain not cleaned for a week,0,0,0,0,0,0,0,1,Low
+standing water attracting mosquitoes urgent attention needed,0,0,0,0,0,0,0,1,Medium
+flyover construction causing traffic jams urgent attention needed,1,1,0,0,0,0,0,0,Medium
+vehicles parked illegally blocking road near my home,0,1,0,0,1,0,0,0,Medium
+main road broken near market area totally ignored by workers,1,0,0,0,0,0,0,0,High
+flickering lights creating unsafe environment totally ignored by workers,0,1,0,0,0,0,0,0,Medium
+transformer caught fire after rain urgent attention needed,0,0,0,0,0,1,0,0,Medium
+plastic waste thrown near road it smells really bad,0,0,0,1,0,0,0,1,Low
+drain overflowing near house causing problem to public,1,0,0,0,0,0,1,0,High
+water tank overflow behind my house causing problem to public,0,0,1,0,0,1,0,0,Low
+bulb fused near temple street everyday issue,0,1,0,1,0,0,0,0,Low
+no drinking water supply since morning it smells really bad,0,0,1,0,0,0,0,0,Medium
+transformer sparks near lamppost,0,1,0,0,0,0,0,0,Medium
+no drinking water supply since morning causing problem to public,0,0,1,0,0,0,0,0,Medium
+water tank overflow behind my house everyday issue,0,0,1,0,0,0,1,0,Low
+vehicles parked illegally blocking road not cleaned for a week,0,0,0,0,1,0,1,0,High
+flickering lights creating unsafe environment urgent attention needed,0,1,0,0,0,0,1,0,Medium
+sewage water spreading bad smell pls fix soon,0,0,0,0,0,0,1,0,High
+main road broken near market area,1,0,0,0,0,0,0,0,Medium
+no drinking water supply since morning not cleaned for a week,0,0,1,0,0,0,0,0,Low
+bulb fused near temple street near my home,0,1,0,1,0,0,0,0,Low
+burning smell from garbage dump urgent attention needed,0,0,0,0,0,1,0,0,High
+no drinking water supply since morning urgent attention needed,0,0,1,0,0,0,0,0,High
+signal timer too short causing jam totally ignored by workers,0,0,0,0,1,0,0,0,Medium
+flickering lights creating unsafe environment not cleaned for a week,0,1,0,0,0,0,0,0,Medium
+electrical pole caught fire suddenly near my home,0,0,0,0,0,1,0,0,Medium
+dead animal lying on street totally ignored by workers,0,0,0,1,0,0,0,0,Medium
+smoke seen from nearby building pls fix soon,0,0,0,0,0,1,0,0,Medium
+street dug up and left unattended urgent attention needed,1,0,0,0,0,0,0,0,Low
+standing water attracting mosquitoes not cleaned for a week,0,0,0,0,0,0,0,1,Medium
+traffic signal not working at main junction not cleaned for a week,0,0,0,0,1,0,0,0,Medium
+potholes on the road making travel dangerous urgent attention needed,1,0,0,0,0,0,0,0,Low
+streetlights not working near park not cleaned for a week,0,1,0,0,0,0,0,0,High
+transformer sparks near lamppost near my home,0,1,0,0,0,0,0,0,High
+burning smell from garbage dump pls fix soon,0,0,0,0,0,1,0,0,Medium
+burning smell from garbage dump everyday issue,0,0,0,0,0,1,0,0,High
+rainwater not draining properly not cleaned for a week,0,0,1,0,0,0,0,1,Low
+rainwater not draining properly,0,0,0,0,0,0,0,1,Low
+street completely dark after evening pls fix soon,0,1,0,0,0,0,0,0,Medium
+flyover construction causing traffic jams totally ignored by workers,1,0,0,0,0,0,0,0,Medium
+drainage blocked causing mosquito problem near my home,0,0,0,0,0,0,1,0,High
+main road broken near market area it smells really bad,1,0,0,0,0,0,0,0,High
+overflowing dustbin near playground not cleaned for a week,0,0,0,1,0,0,0,0,High
+standing water attracting mosquitoes everyday issue,0,0,0,0,0,0,0,1,Medium
+main road broken near market area unsafe for kids,1,0,0,0,0,0,0,0,Low
+no drinking water supply since morning unsafe for kids,0,0,1,0,0,0,0,0,High
+vehicles parked illegally blocking road it smells really bad,0,0,0,0,1,0,0,0,Medium
+rainwater not draining properly near my home,0,0,0,0,0,0,0,1,Low
+open manhole on the street causing problem to public,0,0,0,0,0,0,1,1,Medium
+water entered houses after rain unsafe for kids,0,0,0,0,0,0,0,1,High
+no drinking water supply since morning totally ignored by workers,0,0,1,0,0,0,0,0,Medium

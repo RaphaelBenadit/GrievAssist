@@ -1,0 +1,28 @@
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# Client
+client/node_modules/
+client/build/
+
+# Server
+server/node_modules/
+server/uploads/
+server/*.env
+*.env
+.env.local
+.env.*.local
+
+# Python / ML
+server/ml/models/
+server/ml/__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
