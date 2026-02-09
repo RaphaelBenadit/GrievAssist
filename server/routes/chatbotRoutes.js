@@ -268,19 +268,19 @@ router.post("/gemini", async (req, res) => {
 - 🟢 **Resolved**: Issue has been fixed
 
 ## Important Notes:
-- You must be logged in to submit complaints or view your complaint history
-- The AI automatically categorizes and prioritizes your complaint
-- All chat history is cleared when you logout for privacy
-
-If you have [SYSTEM DATA], use it to provide accurate, specific information about the user's complaints.
-Always respond in a helpful, step-by-step manner with clear navigation instructions.`;
+- You must be logged in to submit complaints or view your complaint history.
+- If a user provides a Complaint ID (e.g., CMP-12345-6789), ALWAYS use the [SYSTEM DATA] to confirm details.
+- If you don't have [SYSTEM DATA] but the user is asking about their complaints, tell them to check the "My Complaints" page.
+- For technical issues, advise users to contact support at support@grievassist.com.
+- ALWAYS maintain a professional, empathetic, and civic-minded tone.`;
 
     // Models to try (ordered by preference)
     const modelsToTry = [
-        "gemini-1.5-flash",
-        "gemini-1.5-pro",
+        "gemini-2.0-flash",
         "gemini-2.0-flash-exp",
-        "gemini-2.0-flash"
+        "gemini-1.5-flash",
+        "gemini-1.5-flash-8b",
+        "gemini-1.5-pro"
     ];
 
     for (const model of modelsToTry) {
@@ -317,21 +317,30 @@ Always respond in a helpful, step-by-step manner with clear navigation instructi
                 });
             }
 
-            if (data.error?.code === 404) {
-                console.log(`Model ${model} not available, trying next...`);
-                continue;
+            // Handle specific errors and continue to next model
+            const errorCode = data.error?.code || response.status;
+            const errorMessage = data.error?.message || "Unknown error";
+
+            if (errorCode === 429) {
+                console.warn(`⚠️ Model ${model} quota exceeded. Trying next...`);
+            } else if (errorCode === 404) {
+                console.warn(`⚠️ Model ${model} not found/available. Trying next...`);
+            } else {
+                console.error(`❌ Error with ${model} (Status ${errorCode}):`, errorMessage);
             }
 
-            console.error(`Error with ${model}:`, data.error?.message);
+            // Continue to next model in the loop
+            continue;
 
         } catch (err) {
-            console.error(`Connection error with ${model}:`, err.message);
+            console.error(`🔥 Connection error with ${model}:`, err.message);
         }
     }
 
-    return res.status(500).json({
-        error: "Failed to get response from Gemini.",
-        details: "All models unavailable"
+    return res.json({
+        reply: "I'm currently experiencing a high volume of requests and my AI core is temporarily unavailable. Please try again in a few moments, or check your dashboard manually for updates on your complaints.",
+        error: "All Gemini models unavailable",
+        isSystemMessage: true
     });
 });
 

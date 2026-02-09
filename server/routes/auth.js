@@ -19,7 +19,7 @@ router.get("/me", async (req, res) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     let user;
     if (decoded.role === "admin") {
-      user = await Admin.findById(decoded.id, "email role");
+      user = await Admin.findById(decoded.id, "email role username");
       if (user) user = { ...user._doc, username: user.username || "Admin" };
     } else {
       user = await User.findById(decoded.id, "name email role");

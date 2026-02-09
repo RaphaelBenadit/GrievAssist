@@ -23,6 +23,10 @@ app.use("/api/notifications", notificationRoutes);
 app.use("/api/chat", chatbotRoutes);
 const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);
+app.use("/api/users", (req, res, next) => {
+    req.url = "/users";
+    authRoutes(req, res, next);
+});
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/grievassist")
