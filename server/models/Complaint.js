@@ -36,7 +36,7 @@ const ComplaintSchema = new mongoose.Schema({
 
   // New AI fields:
   category: { type: String, default: 'unassigned', index: true },
-  priority: { type: String, enum: ['low','medium','high'], default: 'low' },
+  priority: { type: String, enum: ['low', 'medium', 'high'], default: 'low' },
   modelConfidence: { type: Number, default: null },
   isFakeScore: { type: Number, default: null },      // anomaly score, lower -> more anomalous
   humanCorrection: { type: String, default: null },  // admin-corrected category

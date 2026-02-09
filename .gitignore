@@ -21,6 +21,14 @@ server/ml/models/
 server/ml/__pycache__/
 *.pyc
 
+# Server Logs and Data
+server/data/
+server/out.txt
+server/err.txt
+server/error.log
+server/mongod_error.log
+server/gemini_test_log.txt
+
 # OS / editor
 .DS_Store
 Thumbs.db

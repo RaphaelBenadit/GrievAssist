@@ -75,7 +75,7 @@ router.post(
       res.json({ success: true, message: "Reply email sent successfully." });
     } catch (err) {
       console.error("❌ Error sending reply email:", err);
-      
+
       // Provide more specific error messages
       let errorMessage = "Failed to send email";
       if (err.message.includes("Invalid login")) {
@@ -296,11 +296,11 @@ router.post("/reclassify", verifyToken, verifyAdmin, async (req, res) => {
     const { onlyUnassigned = true } = req.body || {};
     const query = onlyUnassigned
       ? {
-          $or: [
-            { category: { $in: [null, "", "unassigned"] } },
-            { priority: { $in: [null, ""] } },
-          ],
-        }
+        $or: [
+          { category: { $in: [null, "", "unassigned"] } },
+          { priority: { $in: [null, ""] } },
+        ],
+      }
       : {};
 
     const complaints = await Complaint.find(query).limit(2000);
@@ -400,7 +400,7 @@ router.delete("/:id", verifyToken, verifyAdmin, async (req, res) => {
 async function findSimilarComplaints(req, res) {
   try {
     const { id } = req.params;
-    
+
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "Invalid complaint ID format" });
     }
@@ -431,9 +431,9 @@ async function findSimilarComplaints(req, res) {
         complaint.user?.email === otherComplaint.user?.email ||
         complaint.email === otherComplaint.email
       ) && (
-        complaint.district === otherComplaint.district ||
-        complaint.address === otherComplaint.address
-      );
+          complaint.district === otherComplaint.district ||
+          complaint.address === otherComplaint.address
+        );
 
       if (similarity > 0.3 || isExactMatch) {
         matches.push({
