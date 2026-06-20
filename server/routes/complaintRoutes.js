@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const fs = require("fs");
 const fetch = require("node-fetch");
 const multer = require("multer");
 
@@ -107,8 +108,11 @@ function generateComplaintId() {
   return `CMP-${timestamp}-${random}`;
 }
 
-// Create a new complaint (with image upload)
-router.post("/", verifyToken, upload.single("image"), async (req, res) => {
+// Create a new complaint (with image + voice upload)
+router.post("/", verifyToken, upload.fields([
+  { name: "image", maxCount: 1 },
+  { name: "voiceRecording", maxCount: 1 }
+]), async (req, res) => {
   try {
     let location = undefined;
     if (req.body.location) {
@@ -122,14 +126,20 @@ router.post("/", verifyToken, upload.single("image"), async (req, res) => {
       }
     }
 
+    const imageFile = req.files?.image?.[0];
+    const voiceFile = req.files?.voiceRecording?.[0];
+
     const newComplaint = new Complaint({
       ...req.body,
       user: req.user._id,
       complaintId: generateComplaintId(),
       status: "pending",
       createdAt: new Date(),
-      image: req.file ? req.file.filename : undefined,
+      image: imageFile ? imageFile.filename : undefined,
+      voiceRecording: voiceFile ? voiceFile.filename : undefined,
       location,
+      videoUrl: req.body.videoUrl || undefined,
+      videoStatus: req.body.videoUrl ? "processing" : undefined,
     });
 
     // 🔍 Call ML Service
@@ -195,6 +205,126 @@ router.post("/", verifyToken, upload.single("image"), async (req, res) => {
     }
 
     await newComplaint.save();
+
+    // 🎥 Trigger async video ML analysis + aggregate all predictions
+    if (newComplaint.videoUrl) {
+      (async () => {
+        try {
+          console.log(`🎥 Triggering async video analysis for ${newComplaint.complaintId}...`);
+          const videoMlRes = await fetch("http://localhost:8001/analyze-video", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              video_url: newComplaint.videoUrl,
+              complaint_id: newComplaint._id.toString(),
+            }),
+          });
+
+          let videoCategory = null;
+          let videoConfidence = 0;
+          let videoStatus = "failed";
+
+          if (videoMlRes.ok) {
+            const videoData = await videoMlRes.json();
+            videoCategory = videoData.category || null;
+            videoConfidence = videoData.confidence || 0;
+            videoStatus = "completed";
+            console.log(`✅ Video analysis completed: ${videoData.category} (${videoData.confidence})`);
+          }
+
+          // Fetch latest complaint state (may have voice analysis too now)
+          const latestComplaint = await Complaint.findById(newComplaint._id);
+
+          // --- AGGREGATE PREDICTIONS: text + voice + video ---
+          const predictions = [];
+
+          // Text ML prediction (weight: 0.5)
+          if (latestComplaint.category && latestComplaint.category !== "unassigned") {
+            predictions.push({
+              source: "text",
+              category: latestComplaint.category,
+              priority: latestComplaint.priority || "low",
+              confidence: latestComplaint.modelConfidence || 0.5,
+              weight: 0.5,
+            });
+          }
+
+          // Voice prediction (weight: 0.3)
+          if (latestComplaint.voiceSummary?.detectedCategory && latestComplaint.voiceSummary.detectedCategory !== "other") {
+            predictions.push({
+              source: "voice",
+              category: latestComplaint.voiceSummary.detectedCategory,
+              priority: latestComplaint.voiceSummary.detectedPriority || "low",
+              confidence: latestComplaint.voiceSummary.confidence || 0.5,
+              weight: 0.3,
+            });
+          }
+
+          // Video prediction (weight: 0.2)
+          if (videoCategory && videoCategory !== "unassigned") {
+            predictions.push({
+              source: "video",
+              category: videoCategory,
+              priority: "medium", // video analysis doesn't predict priority directly
+              confidence: videoConfidence,
+              weight: 0.2,
+            });
+          }
+
+          // Weighted majority voting for category
+          let finalCategory = latestComplaint.category || "unassigned";
+          let finalPriority = latestComplaint.priority || "low";
+          let finalConfidence = latestComplaint.modelConfidence || 0;
+
+          if (predictions.length > 1) {
+            // Category: weighted vote
+            const categoryScores = {};
+            for (const pred of predictions) {
+              const score = pred.weight * pred.confidence;
+              categoryScores[pred.category] = (categoryScores[pred.category] || 0) + score;
+            }
+            finalCategory = Object.entries(categoryScores).sort((a, b) => b[1] - a[1])[0][0];
+
+            // Priority: weighted average (high=3, medium=2, low=1)
+            const prioMap = { high: 3, medium: 2, low: 1 };
+            const prioReverseMap = { 3: "high", 2: "medium", 1: "low" };
+            let totalWeight = 0;
+            let prioScore = 0;
+            for (const pred of predictions) {
+              prioScore += (prioMap[pred.priority] || 1) * pred.weight;
+              totalWeight += pred.weight;
+            }
+            const avgPrio = Math.round(prioScore / totalWeight);
+            finalPriority = prioReverseMap[avgPrio] || "low";
+
+            // Confidence: weighted average
+            totalWeight = 0;
+            let confSum = 0;
+            for (const pred of predictions) {
+              confSum += pred.confidence * pred.weight;
+              totalWeight += pred.weight;
+            }
+            finalConfidence = confSum / totalWeight;
+
+            console.log(`🧮 Aggregated from ${predictions.map(p => p.source).join("+")}: category=${finalCategory}, priority=${finalPriority}, confidence=${finalConfidence.toFixed(2)}`);
+          }
+
+          // Update complaint with video results + aggregated final
+          await Complaint.findByIdAndUpdate(newComplaint._id, {
+            videoCategory,
+            videoConfidence,
+            videoStatus,
+            category: latestComplaint.humanCorrection || finalCategory,
+            priority: finalPriority,
+            modelConfidence: parseFloat(finalConfidence.toFixed(4)),
+          });
+
+        } catch (videoErr) {
+          console.error("⚠️ Video analysis failed:", videoErr.message);
+          await Complaint.findByIdAndUpdate(newComplaint._id, { videoStatus: "failed" });
+        }
+      })();
+    }
 
     // Notification
     try {
@@ -462,5 +592,141 @@ async function findSimilarComplaints(req, res) {
 
 router.get("/duplicates/:id", verifyToken, verifyAdmin, findSimilarComplaints);
 router.get("/similar/:id", verifyToken, verifyAdmin, findSimilarComplaints);
+
+/* -------------------------------------------------------------------------- */
+/*                       VOICE RECORDING SUMMARIZATION                        */
+/* -------------------------------------------------------------------------- */
+router.post("/:id/summarize-audio", verifyToken, async (req, res) => {
+  try {
+    const complaint = await Complaint.findById(req.params.id);
+    if (!complaint) {
+      return res.status(404).json({ message: "Complaint not found" });
+    }
+
+    if (!complaint.voiceRecording) {
+      return res.status(400).json({ message: "No voice recording found for this complaint" });
+    }
+
+    const audioPath = path.join(__dirname, "../uploads", complaint.voiceRecording);
+    if (!fs.existsSync(audioPath)) {
+      return res.status(404).json({ message: "Audio file not found on server" });
+    }
+
+    // Send audio file to local ML service (Whisper transcription)
+    const FormData = (await import("form-data")).default;
+    const formData = new FormData();
+    formData.append("audio", fs.createReadStream(audioPath), {
+      filename: complaint.voiceRecording,
+      contentType: "audio/webm",
+    });
+
+    console.log(`🎙️ Sending audio to Whisper ML service for complaint ${complaint.complaintId}...`);
+
+    const mlRes = await fetch("http://localhost:8001/transcribe", {
+      method: "POST",
+      body: formData,
+      headers: formData.getHeaders(),
+    });
+
+    if (!mlRes.ok) {
+      const errorData = await mlRes.text();
+      console.error("ML Service error:", errorData);
+      return res.status(500).json({ message: "Failed to analyze audio via ML service", error: errorData });
+    }
+
+    const analysis = await mlRes.json();
+
+    // Save to database
+    complaint.voiceSummary = {
+      transcription: analysis.transcription || "",
+      summary: analysis.summary || "",
+      detectedCategory: analysis.detectedCategory || "other",
+      detectedPriority: analysis.detectedPriority || "medium",
+      detectedLanguage: analysis.detectedLanguage || "unknown",
+      analyzedAt: new Date(),
+    };
+
+    // --- Aggregate text + voice + video predictions ---
+    const predictions = [];
+
+    // Text prediction (weight: 0.5)
+    if (complaint.category && complaint.category !== "unassigned") {
+      predictions.push({
+        source: "text",
+        category: complaint.category,
+        priority: complaint.priority || "low",
+        confidence: complaint.modelConfidence || 0.5,
+        weight: 0.5,
+      });
+    }
+
+    // Voice prediction (weight: 0.3)
+    const voiceCat = analysis.detectedCategory;
+    if (voiceCat && voiceCat !== "other") {
+      predictions.push({
+        source: "voice",
+        category: voiceCat,
+        priority: analysis.detectedPriority || "low",
+        confidence: analysis.confidence || 0.5,
+        weight: 0.3,
+      });
+    }
+
+    // Video prediction (weight: 0.2)
+    if (complaint.videoCategory && complaint.videoCategory !== "unassigned" && complaint.videoStatus === "completed") {
+      predictions.push({
+        source: "video",
+        category: complaint.videoCategory,
+        priority: "medium",
+        confidence: complaint.videoConfidence || 0.5,
+        weight: 0.2,
+      });
+    }
+
+    // Perform weighted aggregation if multiple sources exist
+    if (predictions.length > 1) {
+      const categoryScores = {};
+      for (const pred of predictions) {
+        const score = pred.weight * pred.confidence;
+        categoryScores[pred.category] = (categoryScores[pred.category] || 0) + score;
+      }
+      complaint.category = complaint.humanCorrection || Object.entries(categoryScores).sort((a, b) => b[1] - a[1])[0][0];
+
+      const prioMap = { high: 3, medium: 2, low: 1 };
+      const prioReverseMap = { 3: "high", 2: "medium", 1: "low" };
+      let totalWeight = 0, prioScore = 0;
+      for (const pred of predictions) {
+        prioScore += (prioMap[pred.priority] || 1) * pred.weight;
+        totalWeight += pred.weight;
+      }
+      complaint.priority = prioReverseMap[Math.round(prioScore / totalWeight)] || "low";
+
+      totalWeight = 0;
+      let confSum = 0;
+      for (const pred of predictions) {
+        confSum += pred.confidence * pred.weight;
+        totalWeight += pred.weight;
+      }
+      complaint.modelConfidence = parseFloat((confSum / totalWeight).toFixed(4));
+
+      console.log(`🧮 Aggregated from ${predictions.map(p => p.source).join("+")}: category=${complaint.category}, priority=${complaint.priority}`);
+    }
+
+    await complaint.save();
+
+    console.log(`✅ Audio summarized for complaint ${complaint.complaintId} (via Whisper)`);
+    res.json({
+      success: true,
+      message: "Audio analyzed successfully",
+      voiceSummary: complaint.voiceSummary,
+    });
+  } catch (err) {
+    console.error("Error summarizing audio:", err);
+    res.status(500).json({
+      message: "Error analyzing audio recording",
+      error: err.message,
+    });
+  }
+});
 
 module.exports = router;

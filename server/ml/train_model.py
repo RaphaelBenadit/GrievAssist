@@ -1,5 +1,6 @@
 # -----------------------------------------------------------------------------
 # FILE: server/ml/train_model.py
+# Improved training pipeline for GrievAssist complaint classification
 # -----------------------------------------------------------------------------
 import json
 from pathlib import Path
@@ -8,37 +9,61 @@ import pandas as pd
 import numpy as np
 import datetime
 import re
-from sklearn.pipeline import Pipeline
+from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import IsolationForest
+from sklearn.linear_model import LogisticRegression, SGDClassifier
+from sklearn.ensemble import (
+    IsolationForest,
+    GradientBoostingClassifier,
+    RandomForestClassifier,
+)
+from sklearn.svm import LinearSVC
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.preprocessing import LabelEncoder, MultiLabelBinarizer
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
 from sklearn.multiclass import OneVsRestClassifier
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score, f1_score
+import warnings
+warnings.filterwarnings('ignore')
 
-# Resolve paths relative to this file
+# ---------------------------------------------------------------------------
+# Paths
+# ---------------------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / 'data'
-# Prefer the new multilabel dataset filename but fall back to old
-PREFERRED_FILES = [DATA_DIR / 'complaints_dataset.csv', DATA_DIR / 'complaints_labeled.csv']
-DATA_PATH = None
-for p in PREFERRED_FILES:
-    if p.exists():
-        DATA_PATH = p
-        break
+
+# Load ALL available datasets and merge them
+datasets = []
+for csv_name in ['complaints_dataset.csv', 'complaints_labeled.csv']:
+    csv_path = DATA_DIR / csv_name
+    if csv_path.exists():
+        print(f"  Loading {csv_name}...")
+        datasets.append(pd.read_csv(csv_path))
+
+if not datasets:
+    raise FileNotFoundError(
+        f"No dataset found. Place complaints_dataset.csv or complaints_labeled.csv in {DATA_DIR}"
+    )
+
+df = pd.concat(datasets, ignore_index=True)
+print(f"Combined dataset: {len(df)} samples")
 
 OUT_DIR = BASE_DIR / 'models'
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-if DATA_PATH is None:
-    raise FileNotFoundError(
-        f"Dataset not found. Please place complaints_dataset.csv (multi-label) or complaints_labeled.csv in {DATA_DIR}"
-    )
-
-print("Using dataset:", DATA_PATH)
+# ---------------------------------------------------------------------------
+# Text Preprocessing (enhanced)
+# ---------------------------------------------------------------------------
+# Common complaint-domain stop words that don't help classification
+DOMAIN_STOPWORDS = {
+    'pls', 'please', 'fix', 'soon', 'near', 'my', 'home', 'causing',
+    'problem', 'public', 'not', 'cleaned', 'week', 'everyday', 'issue',
+    'totally', 'ignored', 'workers', 'urgent', 'attention', 'needed',
+    'unsafe', 'kids', 'smells', 'really', 'bad'
+}
 
 def clean_text(text: str) -> str:
+    """Enhanced text cleaning for complaint descriptions."""
     if not isinstance(text, str):
         text = str(text)
     text = text.lower()
@@ -48,17 +73,24 @@ def clean_text(text: str) -> str:
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
-# Read csv
-df = pd.read_csv(DATA_PATH)
-# Expect at minimum: description, priority (optional) and one-hot category columns
+def clean_text_no_stopwords(text: str) -> str:
+    """Clean text and remove domain-specific stopwords for better TF-IDF features."""
+    cleaned = clean_text(text)
+    tokens = cleaned.split()
+    tokens = [t for t in tokens if t not in DOMAIN_STOPWORDS and len(t) > 1]
+    return ' '.join(tokens)
+
+
+# ---------------------------------------------------------------------------
+# Data Validation & Cleaning
+# ---------------------------------------------------------------------------
 if 'description' not in df.columns:
     raise ValueError('CSV must include a "description" column')
 
-# Identify category columns: all columns except description and priority
+# Identify category columns
 reserved = {'description', 'priority'}
 category_cols = [c for c in df.columns if c not in reserved]
 if len(category_cols) == 0:
-    # Fallback: if there is a 'category' text column, convert it to single-label one-hot
     if 'category' in df.columns:
         df['category'] = df['category'].astype(str).str.lower().str.strip()
         unique = sorted(df['category'].unique())
@@ -66,80 +98,234 @@ if len(category_cols) == 0:
             df[u] = (df['category'] == u).astype(int)
         category_cols = unique
     else:
-        raise ValueError('No category columns detected. Provide one-hot category columns or a "category" column.')
+        raise ValueError('No category columns detected.')
 
-print('Detected category columns:', category_cols)
+print(f'Category columns: {category_cols}')
 
-# Fill NAs and clean descriptions
+# Drop rows with empty descriptions
 df = df.dropna(subset=['description']).reset_index(drop=True)
+
+# Remove exact duplicate descriptions (keep first)
+before_dedup = len(df)
+df = df.drop_duplicates(subset=['description'], keep='first').reset_index(drop=True)
+print(f'Removed {before_dedup - len(df)} duplicate descriptions. Remaining: {len(df)}')
+
+# Clean descriptions
 df['description_clean'] = df['description'].astype(str).apply(clean_text)
+df['description_features'] = df['description'].astype(str).apply(clean_text_no_stopwords)
 
-# Build X and y_multi
-X = df['description_clean'].values
+# ---------------------------------------------------------------------------
+# Data Augmentation: generate paraphrased variants
+# ---------------------------------------------------------------------------
+def augment_data(df, category_cols, n_augments=2):
+    """Simple data augmentation by word reordering and synonym injection."""
+    augmented_rows = []
 
+    # Synonym map for complaint domain
+    synonyms = {
+        'road': ['roadway', 'highway', 'street', 'path'],
+        'pothole': ['crater', 'pit', 'hole', 'depression'],
+        'water': ['water supply', 'drinking water', 'tap water'],
+        'garbage': ['waste', 'trash', 'rubbish', 'litter'],
+        'fire': ['blaze', 'flames', 'inferno', 'burning'],
+        'drain': ['drainage', 'sewer', 'gutter', 'channel'],
+        'flood': ['waterlogging', 'inundation', 'submersion'],
+        'light': ['lamp', 'illumination', 'streetlight', 'bulb'],
+        'traffic': ['congestion', 'gridlock', 'bottleneck', 'jam'],
+        'broken': ['damaged', 'cracked', 'shattered', 'deteriorated'],
+        'leak': ['leaking', 'seeping', 'dripping', 'oozing'],
+        'blocked': ['clogged', 'choked', 'obstructed', 'jammed'],
+        'dangerous': ['hazardous', 'risky', 'unsafe', 'perilous'],
+        'stench': ['odour', 'smell', 'foul odor', 'stink'],
+        'dark': ['unlit', 'pitch black', 'no visibility', 'dim'],
+        'overflow': ['overflowing', 'spilling', 'flooding over'],
+    }
+
+    np.random.seed(42)
+    for _, row in df.iterrows():
+        text = row['description_clean']
+        words = text.split()
+        if len(words) < 4:
+            continue
+
+        for _ in range(n_augments):
+            new_words = words.copy()
+            # Randomly apply synonym replacement (30% chance per word)
+            for i, w in enumerate(new_words):
+                if w in synonyms and np.random.random() < 0.3:
+                    new_words[i] = np.random.choice(synonyms[w])
+
+            # Randomly swap adjacent words (10% chance)
+            for i in range(len(new_words) - 1):
+                if np.random.random() < 0.1:
+                    new_words[i], new_words[i+1] = new_words[i+1], new_words[i]
+
+            new_text = ' '.join(new_words)
+            if new_text != text:  # Only add if different
+                new_row = row.copy()
+                new_row['description_clean'] = new_text
+                new_row['description_features'] = clean_text_no_stopwords(new_text)
+                augmented_rows.append(new_row)
+
+    if augmented_rows:
+        aug_df = pd.DataFrame(augmented_rows)
+        print(f'Generated {len(aug_df)} augmented samples')
+        return pd.concat([df, aug_df], ignore_index=True)
+    return df
+
+print('\nAugmenting dataset...')
+df = augment_data(df, category_cols, n_augments=2)
+print(f'Total samples after augmentation: {len(df)}')
+
+# ---------------------------------------------------------------------------
+# Build Features: Combined Word + Character n-gram TF-IDF
+# ---------------------------------------------------------------------------
+print('\nBuilding TF-IDF features...')
+
+# Word-level TF-IDF
+word_tfidf = TfidfVectorizer(
+    analyzer='word',
+    ngram_range=(1, 3),        # Capture up to 3-word phrases
+    min_df=2,
+    max_df=0.9,
+    max_features=8000,
+    sublinear_tf=True,         # Apply log normalization
+    strip_accents='unicode',
+)
+
+# Character-level TF-IDF (captures partial word matches, typos)
+char_tfidf = TfidfVectorizer(
+    analyzer='char_wb',
+    ngram_range=(3, 5),
+    min_df=2,
+    max_df=0.9,
+    max_features=5000,
+    sublinear_tf=True,
+    strip_accents='unicode',
+)
+
+# Combine both feature sets
+tfidf = FeatureUnion([
+    ('word', word_tfidf),
+    ('char', char_tfidf),
+], n_jobs=1)
+
+X = df['description_features'].values
 y_multi = df[category_cols].astype(int).values
 
-# Priority column (optional)
+X_vect = tfidf.fit_transform(X)
+print(f'Feature matrix shape: {X_vect.shape}')
+
+# ---------------------------------------------------------------------------
+# IsolationForest for anomaly/fake detection
+# ---------------------------------------------------------------------------
+print('\nTraining IsolationForest...')
+X_dense_sample = X_vect.toarray()
+iso = IsolationForest(n_estimators=300, contamination=0.02, random_state=42, n_jobs=-1)
+iso.fit(X_dense_sample)
+
+# ---------------------------------------------------------------------------
+# Multi-label Category Classifier
+# ---------------------------------------------------------------------------
+print('\nTraining multi-label category classifier...')
+
+# Use Calibrated LinearSVC (better for text classification than LogisticRegression)
+base_clf = LinearSVC(
+    C=1.0,
+    class_weight='balanced',
+    max_iter=5000,
+    loss='squared_hinge',
+    random_state=42,
+)
+calibrated_clf = CalibratedClassifierCV(base_clf, cv=3, method='sigmoid')
+cat_clf = OneVsRestClassifier(calibrated_clf, n_jobs=-1)
+cat_clf.fit(X_vect, y_multi)
+print('Category classifier trained successfully.')
+
+# ---------------------------------------------------------------------------
+# Evaluation: Stratified split
+# ---------------------------------------------------------------------------
+print('\n' + '='*60)
+print('EVALUATION: Category Classification')
+print('='*60)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y_multi, test_size=0.2, random_state=42
+)
+X_test_vect = tfidf.transform(X_test)
+y_pred = cat_clf.predict(X_test_vect)
+
+for i, col in enumerate(category_cols):
+    f1 = f1_score(y_test[:, i], y_pred[:, i], zero_division=0)
+    print(f"  {col:12s} -> F1: {f1:.3f}")
+
+# Overall metrics
+from sklearn.metrics import hamming_loss
+print(f"\n  Hamming Loss: {hamming_loss(y_test, y_pred):.4f}")
+print(f"  Micro F1:     {f1_score(y_test, y_pred, average='micro', zero_division=0):.3f}")
+print(f"  Macro F1:     {f1_score(y_test, y_pred, average='macro', zero_division=0):.3f}")
+
+# ---------------------------------------------------------------------------
+# Priority Classifier (with keyword features)
+# ---------------------------------------------------------------------------
 has_priority = 'priority' in df.columns
 if has_priority:
+    print('\n' + '='*60)
+    print('TRAINING: Priority Classifier')
+    print('='*60)
+
     df['priority'] = df['priority'].astype(str).str.lower().str.strip()
+    # Normalize priority values
+    priority_map = {
+        'high': 'high', 'h': 'high', 'critical': 'high', 'urgent': 'high',
+        'medium': 'medium', 'med': 'medium', 'moderate': 'medium', 'm': 'medium',
+        'low': 'low', 'l': 'low', 'minor': 'low',
+    }
+    df['priority'] = df['priority'].map(lambda x: priority_map.get(x, x))
+
     priority_le = LabelEncoder()
     y_priority = priority_le.fit_transform(df['priority'].values)
-else:
-    priority_le = None
-    y_priority = None
 
-# TF-IDF vectorizer (shared)
-tfidf = TfidfVectorizer(ngram_range=(1,2), min_df=2, max_df=0.95, preprocessor=None)
-X_vect = tfidf.fit_transform(X)
-
-# Train IsolationForest on TF-IDF dense representation
-X_dense = X_vect.toarray()
-iso = IsolationForest(n_estimators=200, contamination=0.01, random_state=42)
-iso.fit(X_dense)
-
-# Train multi-label classifier (One-vs-Rest)
-print('\nTraining multi-label category classifier...')
-base_clf = LogisticRegression(max_iter=2000, class_weight='balanced', solver='liblinear')
-cat_clf = OneVsRestClassifier(base_clf)
-cat_clf.fit(X_vect, y_multi)
-
-# Optionally evaluate using a holdout set (simple random split)
-try:
-    X_train, X_test, y_train, y_test = train_test_split(X, y_multi, test_size=0.2, random_state=42)
-    X_test_vect = tfidf.transform(X_test)
-    y_pred = cat_clf.predict(X_test_vect)
-    # Print micro/macro-level reports per label
-    print('\nCategory classification report (per-label):')
-    for i, col in enumerate(category_cols):
-        print(f"--- {col} ---")
-        print(classification_report(y_test[:, i], y_pred[:, i], zero_division=0))
-except Exception as e:
-    print('Skipping holdout evaluation due to:', e)
-
-# Train priority classifier if priority column exists
-if has_priority:
-    print('\nTraining priority classifier...')
-    prio_clf = LogisticRegression(max_iter=2000, class_weight='balanced', solver='liblinear')
-    # Use same tfidf features
+    # Use Gradient Boosting for priority (handles class imbalance better)
+    prio_clf = GradientBoostingClassifier(
+        n_estimators=200,
+        max_depth=4,
+        learning_rate=0.1,
+        subsample=0.8,
+        random_state=42,
+    )
     prio_clf.fit(X_vect, y_priority)
-    # Evaluate
+
+    # Evaluate priority
     try:
-        X_train_p, X_test_p, y_train_p, y_test_p = train_test_split(X, y_priority, test_size=0.2, random_state=42, stratify=y_priority)
+        X_train_p, X_test_p, y_train_p, y_test_p = train_test_split(
+            X, y_priority, test_size=0.2, random_state=42, stratify=y_priority
+        )
         X_test_p_vect = tfidf.transform(X_test_p)
         y_pred_p = prio_clf.predict(X_test_p_vect)
         print('\nPriority classification report:')
-        print(classification_report(y_test_p, y_pred_p, target_names=priority_le.classes_, zero_division=0))
+        print(classification_report(
+            y_test_p, y_pred_p,
+            target_names=priority_le.classes_,
+            zero_division=0
+        ))
+        print(f"  Accuracy: {accuracy_score(y_test_p, y_pred_p):.3f}")
     except Exception as e:
-        print('Skipping priority holdout eval due to:', e)
+        print(f'Skipping priority eval: {e}')
 else:
     prio_clf = None
+    priority_le = None
 
-# Save artifacts
+# ---------------------------------------------------------------------------
+# Save Artifacts
+# ---------------------------------------------------------------------------
+print('\nSaving model artifacts...')
+
 joblib.dump(tfidf, OUT_DIR / 'tfidf_vectorizer.joblib')
 joblib.dump(cat_clf, OUT_DIR / 'category_model.joblib')
 joblib.dump(category_cols, OUT_DIR / 'category_columns.joblib')
 joblib.dump(iso, OUT_DIR / 'isoforest.joblib')
+
 if has_priority:
     joblib.dump(prio_clf, OUT_DIR / 'priority_model.joblib')
     joblib.dump(priority_le, OUT_DIR / 'priority_encoder.joblib')
@@ -147,10 +333,18 @@ if has_priority:
 metadata = {
     'created_at': datetime.datetime.utcnow().isoformat(),
     'n_samples': int(df.shape[0]),
-    'categories': category_cols,
+    'n_original_samples': int(len(df)),
+    'n_features': int(X_vect.shape[1]),
+    'categories': list(category_cols),
     'has_priority': bool(has_priority),
+    'model_type': 'CalibratedLinearSVC',
+    'priority_model_type': 'GradientBoosting' if has_priority else None,
+    'tfidf_config': 'word(1-3gram) + char_wb(3-5gram)',
 }
 with open(OUT_DIR / 'metadata.json', 'w') as f:
     json.dump(metadata, f, indent=2)
 
-print('\nSaved model artifacts to', OUT_DIR)
+print(f'\n[OK] All model artifacts saved to {OUT_DIR}')
+print(f'   Total training samples: {len(df)}')
+print(f'   Feature dimensions: {X_vect.shape[1]}')
+print(f'   Categories: {category_cols}')

@@ -5,3 +5,5 @@ joblib
 numpy
 pandas
 pydantic
+openai-whisper
+python-multipart

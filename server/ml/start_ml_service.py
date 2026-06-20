@@ -18,6 +18,6 @@ if __name__ == "__main__":
         "app:app",  # <-- Import string matches your file name 'app.py'
         host="0.0.0.0",
         port=8001,
-        reload=True,  # Auto-reload on code changes
+        reload=False,  # Disabled to avoid stale cache issues
         log_level="info"
     )

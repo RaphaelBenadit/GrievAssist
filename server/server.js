@@ -21,6 +21,10 @@ app.use("/uploads", express.static(require("path").join(__dirname, "uploads")));
 app.use("/api/complaints", complaintRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/chat", chatbotRoutes);
+const videoRoutes = require("./routes/videoRoutes");
+app.use("/api/video", videoRoutes);
+const feedRoutes = require("./routes/feedRoutes");
+app.use("/api/feed", feedRoutes);
 const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);
 app.use("/api/users", (req, res, next) => {
@@ -40,6 +44,6 @@ app.get("/", (req, res) => {
 
 // Server listener
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`🚀 Server running on port ${PORT} (accessible on all network interfaces)`);
 });

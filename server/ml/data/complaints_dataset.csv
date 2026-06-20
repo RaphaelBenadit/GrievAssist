@@ -1,0 +1,408 @@
+description,roads,lighting,water,garbage,traffic,fire,drainage,rainwater,priority
+the road near my house has multiple deep potholes causing accidents daily,1,0,0,0,0,0,0,0,High
+potholes everywhere on the main highway stretch near sector 12,1,0,0,0,0,0,0,0,High
+road surface is completely damaged after monsoon rains need immediate repair,1,0,0,0,0,0,0,0,High
+broken road divider on national highway causing frequent accidents,1,0,0,0,0,0,0,0,High
+the entire road has been dug up for pipeline work and left unrepaired for months,1,0,0,0,0,0,0,0,High
+speed breakers are too high and unmarked causing vehicle damage,1,0,0,0,0,0,0,0,Medium
+newly constructed road already showing cracks and deterioration,1,0,0,0,0,0,0,0,Medium
+road shoulders are eroding making it dangerous for pedestrians,1,0,0,0,0,0,0,0,Medium
+manhole cover missing on busy road people have fallen in,1,0,0,0,0,0,1,0,High
+footpath tiles are broken and uneven causing tripping hazards,1,0,0,0,0,0,0,0,Medium
+road near school zone has no proper markings or signs,1,0,0,0,1,0,0,0,High
+bridge railing is damaged and poses safety risk,1,0,0,0,0,0,0,0,High
+tar road melting in summer heat making surface sticky and dangerous,1,0,0,0,0,0,0,0,Medium
+unpaved road becomes muddy swamp during rains blocking access,1,0,0,0,0,0,0,1,Medium
+road construction debris left on highway creating hazard,1,0,0,0,0,0,0,0,Medium
+large crack developing on the flyover near metro station,1,0,0,0,0,0,0,0,High
+road near hospital has been in terrible condition for over a year,1,0,0,0,0,0,0,0,High
+service road completely unusable due to broken surface,1,0,0,0,0,0,0,0,Medium
+road markings have faded completely making lanes confusing,1,0,0,0,1,0,0,0,Medium
+colony internal roads have never been tarred since construction,1,0,0,0,0,0,0,0,Medium
+road subsidence near water pipeline repair area very dangerous,1,0,1,0,0,0,0,0,High
+sharp stones protruding from damaged road surface causing tyre punctures,1,0,0,0,0,0,0,0,Medium
+road near bus stop is flooded every time it rains,1,0,0,0,0,0,0,1,Medium
+construction company damaged road and did not restore it properly,1,0,0,0,0,0,0,0,Medium
+main arterial road has been patched poorly multiple times,1,0,0,0,0,0,0,0,Low
+the approach road to our village is in deplorable condition,1,0,0,0,0,0,0,0,Medium
+road widening project abandoned halfway leaving mess,1,0,0,0,0,0,0,0,Medium
+residential street has massive crater sized pothole near entrance,1,0,0,0,0,0,0,0,High
+pedestrian crossing not visible due to worn out paint on road,1,0,0,0,1,0,0,0,Medium
+gravel road needs proper tarring has been pending for years,1,0,0,0,0,0,0,0,Low
+streetlights in our colony have not been working for two weeks,0,1,0,0,0,0,0,0,Medium
+entire stretch of main road is pitch dark at night very unsafe,0,1,0,0,0,0,0,0,High
+bulbs in streetlight poles are fused and broken near market area,0,1,0,0,0,0,0,0,Medium
+streetlight pole is leaning dangerously and may fall anytime,0,1,0,0,0,0,0,0,High
+no streetlights installed in newly developed residential area,0,1,0,0,0,0,0,0,Medium
+park lighting is completely gone children cannot play in evenings,0,1,0,0,0,0,0,0,Medium
+streetlight burns during daytime wasting electricity,0,1,0,0,0,0,0,0,Low
+exposed electrical wires from broken streetlight pole dangerous,0,1,0,0,0,0,0,0,High
+flickering streetlight near junction causing visibility issues at night,0,1,0,0,0,0,0,0,Medium
+sodium vapour lamp replaced with dim LED not enough brightness,0,1,0,0,0,0,0,0,Low
+streetlight timer malfunctioning lights turn off at midnight,0,1,0,0,0,0,0,0,Medium
+underground cable fault causing multiple streetlights to fail,0,1,0,0,0,0,0,0,Medium
+new colony has zero street illumination residents feel unsafe,0,1,0,0,0,0,0,0,High
+broken glass from vandalized streetlight on footpath,0,1,0,0,0,0,0,0,Medium
+transformer feeding streetlights has blown out entire area dark,0,1,0,0,0,0,0,0,High
+streetlight near school bus stop not working children at risk in dark,0,1,0,0,0,0,0,0,High
+decorative lights installed for festival left broken and dangling,0,1,0,0,0,0,0,0,Low
+light pole foundation eroded and pole swaying in wind,0,1,0,0,0,0,0,0,High
+mercury vapour lamp needs replacement causing dim yellow light,0,1,0,0,0,0,0,0,Low
+street completely dark after evening making it unsafe for women,0,1,0,0,0,0,0,0,High
+multiple light poles damaged by truck and not repaired,0,1,0,0,0,0,0,0,Medium
+automatic sensor on streetlight broken lights stay off all night,0,1,0,0,0,0,0,0,Medium
+lane behind main market has no lighting antisocial activities happening,0,1,0,0,0,0,0,0,High
+light cable cut during road digging work not reconnected,0,1,0,0,0,0,0,0,Medium
+ornamental lights on bridge all broken gives shabby appearance,0,1,0,0,0,0,0,0,Low
+public toilet area has no lighting unhygienic conditions,0,1,0,0,0,0,0,0,Medium
+underpass lighting completely failed very dangerous for pedestrians,0,1,0,0,0,0,0,0,High
+high mast light at junction not working causing accidents at night,0,1,0,0,0,0,0,0,High
+solar streetlights installed last year already stopped working,0,1,0,0,0,0,0,0,Medium
+no water supply in our area for the past three days,0,0,1,0,0,0,0,0,High
+water comes only for 30 minutes daily not sufficient for family,0,0,1,0,0,0,0,0,High
+tap water is brown and has foul smell unfit for consumption,0,0,1,0,0,0,0,0,High
+water pressure extremely low in upper floors of apartment building,0,0,1,0,0,0,0,0,Medium
+water pipeline burst on main road water wasting continuously,0,0,1,0,0,0,0,0,High
+contaminated water supply causing stomach illness in our locality,0,0,1,0,0,0,0,0,High
+water meter reading is abnormally high suspecting leakage in pipeline,0,0,1,0,0,0,0,0,Medium
+bore well in our area has gone dry need alternative arrangement,0,0,1,0,0,0,0,0,High
+water tanker not reaching our area despite repeated requests,0,0,1,0,0,0,0,0,High
+sewage water mixing with drinking water pipeline very dangerous,0,0,1,0,0,0,1,0,High
+overhead tank not being filled properly causing water shortage,0,0,1,0,0,0,0,0,Medium
+water supply timing changed without notice causing inconvenience,0,0,1,0,0,0,0,0,Low
+illegal water connections depleting supply for rest of colony,0,0,1,0,0,0,0,0,Medium
+water purification plant not functioning properly dirty water supplied,0,0,1,0,0,0,0,0,High
+rusty water coming from taps after pipeline maintenance,0,0,1,0,0,0,0,0,Medium
+no water connection provided to newly built houses in layout,0,0,1,0,0,0,0,0,Medium
+water leaking from underground pipeline flooding basement,0,0,1,0,0,0,0,0,High
+chlorine smell too strong in supplied water causing irritation,0,0,1,0,0,0,0,0,Medium
+public water tap broken and water flowing continuously being wasted,0,0,1,0,0,0,0,0,Medium
+water supply comes at 3am in the morning very inconvenient timing,0,0,1,0,0,0,0,0,Low
+hand pump installed in colony not working for past month,0,0,1,0,0,0,0,0,Medium
+water pipeline damaged during road construction not yet repaired,0,0,1,0,0,0,0,0,High
+water harvesting system in public building not maintained and broken,0,0,1,0,0,0,0,0,Low
+entire ward facing water crisis due to pump house failure,0,0,1,0,0,0,0,0,High
+water bill showing extremely high amount despite low usage,0,0,1,0,0,0,0,0,Low
+sump water getting contaminated due to nearby septic tank overflow,0,0,1,0,0,0,1,0,High
+no hot water facility in government hospital patient ward,0,0,1,0,0,0,0,0,Medium
+well water level dropped drastically need government intervention,0,0,1,0,0,0,0,0,High
+fluoride content in ground water too high urgent testing needed,0,0,1,0,0,0,0,0,High
+water connection valve broken on street water spraying everywhere,0,0,1,0,0,0,0,0,Medium
+garbage not collected from our street for over a week now,0,0,0,1,0,0,0,0,High
+garbage dump near residential area causing horrible stench,0,0,0,1,0,0,0,0,High
+stray dogs tearing open garbage bags and scattering waste everywhere,0,0,0,1,0,0,0,0,Medium
+construction debris dumped on empty plot attracting rodents,0,0,0,1,0,0,0,0,Medium
+garbage truck comes irregularly sometimes skips our lane entirely,0,0,0,1,0,0,0,0,Medium
+open burning of garbage near playground causing air pollution,0,0,0,1,0,1,0,0,High
+overflowing community dustbin not cleared for many days,0,0,0,1,0,0,0,0,High
+biomedical waste seen dumped along with regular garbage near hospital,0,0,0,1,0,0,0,0,High
+plastic waste accumulating in vacant lot near school,0,0,0,1,0,0,0,0,Medium
+garbage segregation not being followed by collection workers,0,0,0,1,0,0,0,0,Low
+dead animal carcass on road not removed for two days,0,0,0,1,0,0,0,0,High
+e-waste dumped near lake causing environmental damage,0,0,0,1,0,0,0,0,High
+food waste from restaurant thrown on street attracting rats,0,0,0,1,0,0,0,0,Medium
+garbage collection vehicle leaking dirty water on roads,0,0,0,1,0,0,0,0,Medium
+no dustbin provided in our area people forced to dump on roadside,0,0,0,1,0,0,0,0,Medium
+slaughterhouse waste being dumped in open area near houses,0,0,0,1,0,0,0,0,High
+recyclable waste not being separated leading to landfill overflow,0,0,0,1,0,0,0,0,Low
+market area generates huge garbage daily but has insufficient bins,0,0,0,1,0,0,0,0,Medium
+hazardous chemical waste dumped near agricultural land,0,0,0,1,0,0,0,0,High
+garbage workers on strike waste piling up across the city,0,0,0,1,0,0,0,0,High
+temple festival generates massive waste no cleanup arranged,0,0,0,1,0,0,0,0,Medium
+hotel kitchen waste dumped in drain causing blockage,0,0,0,1,0,0,1,0,Medium
+neighbourhood people dumping garbage into storm water drain,0,0,0,1,0,0,1,0,High
+broken glass and sharp objects in garbage pile near childrens play area,0,0,0,1,0,0,0,0,High
+composting facility near colony emitting unbearable odour,0,0,0,1,0,0,0,0,Medium
+garbage collection timing is 2am causing noise disturbance,0,0,0,1,0,0,0,0,Low
+commercial waste from shops dumped on residential street,0,0,0,1,0,0,0,0,Medium
+sanitary waste seen scattered on public road extremely unhygienic,0,0,0,1,0,0,0,0,High
+paint and chemical cans dumped near drinking water source,0,0,0,1,0,1,0,0,High
+unauthorized garbage dumping yard created near our colony,0,0,0,1,0,0,0,0,High
+traffic signal at major intersection not working causing chaos,0,0,0,0,1,0,0,0,High
+no traffic police presence during school hours near school zone,0,0,0,0,1,0,0,0,High
+heavy traffic congestion daily during peak hours on bypass road,0,0,0,0,1,0,0,0,Medium
+illegal parking on both sides of road blocking traffic flow,0,0,0,0,1,0,0,0,Medium
+speed limit signs missing on accident prone stretch,0,0,0,0,1,0,0,0,High
+traffic signal timer too short for pedestrians to cross safely,0,0,0,0,1,0,0,0,High
+trucks using residential roads instead of designated routes,0,0,0,0,1,0,0,0,Medium
+no zebra crossing marked near busy shopping complex,0,0,0,0,1,0,0,0,Medium
+auto rickshaws blocking road while waiting for passengers,0,0,0,0,1,0,0,0,Low
+roundabout traffic confused due to missing direction signs,0,0,0,0,1,0,0,0,Medium
+overspeeding vehicles near residential area no speed breakers,0,0,0,0,1,0,0,0,High
+illegal bus stop created causing traffic bottleneck,0,0,0,0,1,0,0,0,Medium
+one way sign removed causing wrong side driving accidents,0,0,0,0,1,0,0,0,High
+traffic jam lasting hours daily on ring road due to construction,0,0,0,0,1,0,0,0,Medium
+pedestrian overbridge needed at busy market road,0,0,0,0,1,0,0,0,High
+double parking on commercial street making traffic impossible,0,0,0,0,1,0,0,0,Medium
+school van stopping in middle of road blocking all traffic,0,0,0,0,1,0,0,0,Medium
+road rage incidents increasing due to bottleneck at narrow bridge,0,0,0,0,1,0,0,0,High
+no separate lane for cycles and pedestrians on highway,0,0,0,0,1,0,0,0,Medium
+traffic island damaged vehicles driving over it dangerously,0,0,0,0,1,0,0,0,Medium
+unauthorized street vendors blocking footpath forcing pedestrians on road,0,0,0,0,1,0,0,0,Medium
+traffic diversion for VIP movement without prior notice,0,0,0,0,1,0,0,0,Low
+broken traffic barrier at railway crossing very dangerous,0,0,0,0,1,0,0,0,High
+heavy vehicles parked on highway shoulder blocking visibility,0,0,0,0,1,0,0,0,High
+ambulance stuck in traffic due to no clear emergency corridor,0,0,0,0,1,0,0,0,High
+traffic signals not synchronized causing stop and go frustration,0,0,0,0,1,0,0,0,Medium
+parking lot full vehicles parked on road causing jam,0,0,0,0,1,0,0,0,Medium
+roadside encroachment narrowing road causing congestion,0,0,0,0,1,0,0,0,Medium
+no left turn signal causing dangerous merging at junction,0,0,0,0,1,0,0,0,High
+fire broke out in apartment building third floor emergency help needed,0,0,0,0,0,1,0,0,High
+electrical short circuit caused fire in shop at market,0,0,0,0,0,1,0,0,High
+fire in garbage dump spreading towards nearby houses,0,0,0,1,0,1,0,0,High
+transformer exploded causing fire on electrical pole,0,1,0,0,0,1,0,0,High
+kitchen fire in restaurant spreading to adjacent shops urgent,0,0,0,0,0,1,0,0,High
+dry grass fire near petrol station very dangerous situation,0,0,0,0,0,1,0,0,High
+warehouse caught fire huge smoke visible from far away,0,0,0,0,0,1,0,0,High
+fire hydrant near our building is not working need maintenance,0,0,0,0,0,1,0,0,High
+sparking seen from old wiring in government school fire risk,0,1,0,0,0,1,0,0,High
+fire escape blocked in commercial building safety violation,0,0,0,0,0,1,0,0,High
+burning smell coming from electrical panel in apartment complex,0,0,0,0,0,1,0,0,High
+chemical factory fire smoke causing breathing difficulty in area,0,0,0,0,0,1,0,0,High
+fire crackers storage godown caught fire near residential area,0,0,0,0,0,1,0,0,High
+overheated AC unit smoking visible from balcony,0,0,0,0,0,1,0,0,Medium
+old building electrical panel sparking could catch fire anytime,0,1,0,0,0,1,0,0,High
+gas leak smell near cooking gas storage potential fire hazard,0,0,0,0,0,1,0,0,High
+stubble burning in fields near highway causing smoke on road,0,0,0,0,0,1,0,0,Medium
+forest fire approaching settlements on outskirts urgent evacuation needed,0,0,0,0,0,1,0,0,High
+children playing with fire near parked vehicles in parking lot,0,0,0,0,0,1,0,0,High
+welding work in residential building without safety precautions fire risk,0,0,0,0,0,1,0,0,Medium
+fire station too far from our area response time is very long,0,0,0,0,0,1,0,0,Medium
+electric meter box overheating and sparking could start fire,0,1,0,0,0,1,0,0,High
+smoke billowing from factory chimney during night illegal burning,0,0,0,0,0,1,0,0,Medium
+lpg cylinder leaked and caught fire in neighbours house,0,0,0,0,0,1,0,0,High
+arson suspected someone set fire to parked vehicles at night,0,0,0,0,0,1,0,0,High
+fire safety equipment in shopping mall expired needs replacement,0,0,0,0,0,1,0,0,Medium
+burn marks on electric pole wiring could reignite,0,1,0,0,0,1,0,0,High
+wooden structure near temple caught fire during pooja,0,0,0,0,0,1,0,0,High
+plastic godown fire producing toxic fumes affecting entire area,0,0,0,0,0,1,0,0,High
+drainage completely blocked causing sewage overflow on street,0,0,0,0,0,0,1,0,High
+open drain near school is a safety hazard for children,0,0,0,0,0,0,1,0,High
+drainage cover missing person fell and got injured yesterday,0,0,0,0,0,0,1,0,High
+sewage water flowing on the road due to broken drain pipe,0,0,0,0,0,0,1,0,High
+storm water drain clogged with plastic waste and debris,0,0,0,0,0,0,1,0,Medium
+unbearable stench from clogged drainage system in our lane,0,0,0,0,0,0,1,0,High
+drain cleaning not done before monsoon now flooding everywhere,0,0,0,0,0,0,1,0,High
+mosquito breeding in stagnant drain water spreading dengue,0,0,0,0,0,0,1,0,High
+underground drainage pipe collapsed causing road to sink,0,0,0,0,0,0,1,0,High
+septic tank overflow causing sewage to enter basement parking,0,0,0,0,0,0,1,0,High
+open nala emitting foul gases making it hard to breathe,0,0,0,0,0,0,1,0,High
+drainage water entering ground floor shops during heavy rain,0,0,0,0,0,0,1,1,High
+new drainage system connected wrongly sewage flowing backwards,0,0,0,0,0,0,1,0,High
+manhole overflowing during rains flooding entire street,0,0,0,0,0,0,1,1,High
+drain concrete wall crumbling debris falling into waterway,0,0,0,0,0,0,1,0,Medium
+no proper drainage system in our area water logs after every rain,0,0,0,0,0,0,1,1,Medium
+illegal encroachment over drainage channel blocking water flow,0,0,0,0,0,0,1,0,Medium
+industrial effluent being discharged into storm water drain,0,0,0,0,0,0,1,0,High
+drainage overflow causing contamination of nearby borewell,0,0,1,0,0,0,1,0,High
+rats and cockroaches coming from open drain into our house,0,0,0,0,0,0,1,0,Medium
+sewage treatment plant not working raw sewage entering river,0,0,0,0,0,0,1,0,High
+blocked drain causing water accumulation attracting snakes,0,0,0,0,0,0,1,0,High
+drainage work incomplete for six months causing problems,0,0,0,0,0,0,1,0,Medium
+gutter cover broken near bus stop pedestrians at risk,0,0,0,0,0,0,1,0,High
+communal drain shared between colonies needs regular cleaning,0,0,0,0,0,0,1,0,Medium
+drainage capacity insufficient for the population density upgrade needed,0,0,0,0,0,0,1,0,Medium
+silt accumulated in drainage channel reducing flow capacity,0,0,0,0,0,0,1,0,Medium
+tree roots have cracked drainage pipe causing leakage,0,0,0,0,0,0,1,0,Medium
+rainwater flooding basement of residential building no pumping,0,0,0,0,0,0,0,1,High
+heavy rain caused waterlogging on main road vehicles stranded,0,0,0,0,0,0,0,1,High
+rainwater stagnation in low lying area breeding mosquitoes,0,0,0,0,0,0,0,1,Medium
+houses flooded after heavy rainfall furniture damaged,0,0,0,0,0,0,0,1,High
+rainwater entering electrical installations risk of electrocution,0,0,0,0,0,0,0,1,High
+park completely submerged after rain children playground unusable,0,0,0,0,0,0,0,1,Medium
+rain harvesting pit overflowing water spreading to neighbour compound,0,0,0,0,0,0,0,1,Low
+road underpass flooded with rainwater blocking traffic completely,0,0,0,0,1,0,0,1,High
+campus flooded due to poor rainwater management system,0,0,0,0,0,0,0,1,Medium
+agricultural fields waterlogged due to improper rainwater channeling,0,0,0,0,0,0,0,1,Medium
+rainwater accumulating on terrace causing ceiling leakage in apartment,0,0,0,0,0,0,0,1,Medium
+storm drain inlet blocked by leaves and debris water not draining,0,0,0,0,0,0,1,1,Medium
+standing water on road after rain creating dangerous driving conditions,0,0,0,0,0,0,0,1,Medium
+basement parking flooded every monsoon due to no rainwater drain,0,0,0,0,0,0,0,1,High
+flash flooding in colony due to blocked natural water channel,0,0,0,0,0,0,0,1,High
+waterlogging near hospital entrance patients unable to access,0,0,0,0,0,0,0,1,High
+rain causes mud slides on hillside road cutting off access,0,0,0,0,0,0,0,1,High
+playground becomes swamp after rain takes weeks to dry,0,0,0,0,0,0,0,1,Low
+water stagnation in construction site pits after rain mosquito breeding ground,0,0,0,0,0,0,0,1,Medium
+rainwater gushing through compound wall damaging foundation,0,0,0,0,0,0,0,1,High
+entire street floods within minutes of rain onset drain inadequate,0,0,0,0,0,0,1,1,High
+cellars and ground floors getting rainwater ingress every year,0,0,0,0,0,0,0,1,Medium
+low lying residential area converted to lake during heavy rains,0,0,0,0,0,0,0,1,High
+rainwater ponding near electric transformer extremely dangerous,0,1,0,0,0,0,0,1,High
+no rainwater harvesting system despite government mandate,0,0,0,0,0,0,0,1,Low
+rainwater runoff from construction site eroding our compound wall,0,0,0,0,0,0,0,1,Medium
+there are deep potholes on MG road near city center many two wheelers have fallen,1,0,0,0,0,0,0,0,High
+streetlights on 5th cross road have been off for a month now very unsafe at night,0,1,0,0,0,0,0,0,High
+we have not received water supply for the last 4 days our overhead tank is empty,0,0,1,0,0,0,0,0,High
+garbage pile up near the community park is attracting stray dogs and rats,0,0,0,1,0,0,0,0,High
+the traffic light at MG road junction has been flashing yellow for weeks causing confusion,0,0,0,0,1,0,0,0,High
+a live electrical wire has fallen on the ground near transformer sparking dangerously,0,1,0,0,0,1,0,0,High
+the drainage system in our entire ward is clogged causing sewage overflow everywhere,0,0,0,0,0,0,1,0,High
+heavy rains yesterday caused 3 feet waterlogging in our area cars got stuck,0,0,0,0,0,0,0,1,High
+the road was freshly laid but already has cracks everywhere poor quality work,1,0,0,0,0,0,0,0,Medium
+can you install LED streetlights in our area the old ones keep failing,0,1,0,0,0,0,0,0,Low
+water tanker comes only once a week we need daily supply in summer,0,0,1,0,0,0,0,0,Medium
+please place more dustbins near the bus stand area it is always littered,0,0,0,1,0,0,0,0,Low
+need a traffic signal at the new junction near IT park many accidents happen there,0,0,0,0,1,0,0,0,High
+small fire broke out in electrical room of apartment complex fire department called,0,0,0,0,0,1,0,0,High
+need drain cleaning before monsoon last year our street was completely flooded,0,0,0,0,0,0,1,1,Medium
+water stagnation in front of my shop is driving away customers,0,0,0,0,0,0,0,1,Medium
+huge pothole on highway caused my vehicle to skid and i got injured,1,0,0,0,0,0,0,0,High
+broken road near railway crossing is extremely dangerous at night with no lights,1,1,0,0,0,0,0,0,High
+our borewell water has turned yellowish and smells bad health risk,0,0,1,0,0,0,0,0,High
+garbage van does not come to our lane only collects from main road,0,0,0,1,0,0,0,0,Medium
+wrong way driving on one way street near market police should take action,0,0,0,0,1,0,0,0,High
+short circuit in street electric pole caused small fire quick action averted disaster,0,1,0,0,0,1,0,0,High
+drain behind our house overflows whenever it rains heavily foul smell persists,0,0,0,0,0,0,1,1,High
+water logging in underpass near railway station commuters stranded in every rain,0,0,0,0,0,0,0,1,High
+approach road to government hospital full of potholes ambulances struggle,1,0,0,0,0,0,0,0,High
+street light pole has fallen blocking the footpath near bus stop,0,1,0,0,0,0,0,0,High
+the water supplied has excessive chlorine my family member developed skin rash,0,0,1,0,0,0,0,0,High
+meat shop waste dumped in open plot next to residential building unbearable smell,0,0,0,1,0,0,0,0,High
+accidents happening daily at unmarked speed breaker on state highway fix it,1,0,0,0,1,0,0,0,High
+smell of gas near old LPG godown area needs fire safety inspection,0,0,0,0,0,1,0,0,High
+sewage pipeline burst near drinking water source urgent contamination risk,0,0,1,0,0,0,1,0,High
+ankle deep water standing on road for three days after light rain,0,0,0,0,0,0,0,1,Medium
+road between two villages washed away in flood needs urgent reconstruction,1,0,0,0,0,0,0,0,High
+only two of twelve streetlights working in our government housing colony,0,1,0,0,0,0,0,0,Medium
+tanker water being supplied is muddy and unfit for even washing,0,0,1,0,0,0,0,0,High
+dumping of plastic and thermocol waste into lake by nearby shops,0,0,0,1,0,0,0,0,High
+auto stand encroaching on road leaving only one lane for traffic,0,0,0,0,1,0,0,0,Medium
+fire alarm system in government office building not functional,0,0,0,0,0,1,0,0,Medium
+concrete drain cover broken sharp edges exposed accident waiting to happen,0,0,0,0,0,0,1,0,High
+every monsoon our colony gets flooded no permanent solution done yet,0,0,0,0,0,0,0,1,High
+road resurfacing work ongoing for 3 months still not complete causing dust,1,0,0,0,0,0,0,0,Medium
+power cables hanging low near children park can be reached by kids,0,1,0,0,0,0,0,0,High
+irregular water supply timings vary daily no fixed schedule communicated,0,0,1,0,0,0,0,0,Medium
+organic waste composting pit in the area overflowing causing fly nuisance,0,0,0,1,0,0,0,0,Medium
+no traffic warden posted at busy school junction morning peak hours,0,0,0,0,1,0,0,0,High
+firecracker shop operating without license near petrol pump,0,0,0,0,0,1,0,0,High
+underground drainage system capacity inadequate for current population,0,0,0,0,0,0,1,0,Medium
+stormwater drains clogged with silt and garbage unable to handle even light rain,0,0,0,1,0,0,1,1,High
+badly damaged road in industrial area heavy trucks making it worse daily,1,0,0,0,0,0,0,0,High
+high mast lights at playground not working since inauguration,0,1,0,0,0,0,0,0,Medium
+water contamination report from lab shows harmful bacteria in supply,0,0,1,0,0,0,0,0,High
+electronic waste being burned in open area toxic fumes spreading,0,0,0,1,0,1,0,0,High
+traffic congestion at toll plaza queue extends for 2 kilometers,0,0,0,0,1,0,0,0,Medium
+old building with faulty wiring fire hazard needs inspection,0,1,0,0,0,1,0,0,High
+open drainage canal near school has no fencing children fall in,0,0,0,0,0,0,1,0,High
+urban flooding in our area due to concretization and no green spaces,0,0,0,0,0,0,0,1,Medium
+crumbling footpath near senior citizen home elderly people tripping,1,0,0,0,0,0,0,0,Medium
+dim and broken lights on jogging track in public park,0,1,0,0,0,0,0,0,Low
+intermittent water supply with air locks making pipes bang loudly,0,0,1,0,0,0,0,0,Medium
+abandoned vehicles on roadside becoming garbage dumping spots,0,0,0,1,1,0,0,0,Medium
+need pedestrian signal at crosswalk near elderly home,0,0,0,0,1,0,0,0,Medium
+smoke detector in community hall not working needs urgent replacement,0,0,0,0,0,1,0,0,Medium
+sewer line running through open field causing ground water pollution,0,0,1,0,0,0,1,0,High
+puddles forming on flat roof of bus shelter breeding mosquitoes after rain,0,0,0,0,0,0,0,1,Low
+pavement subsided near metro construction site very unsafe to walk,1,0,0,0,0,0,0,0,High
+faulty wiring in bus shelter electric shock risk during rain,0,1,0,0,0,1,0,0,High
+well water in our village showing high iron content reddish colour,0,0,1,0,0,0,0,0,Medium
+cattle waste dumped on public road creating slip hazard,0,0,0,1,0,0,0,0,Medium
+chaotic traffic near temple during festival time police help needed,0,0,0,0,1,0,0,0,Medium
+gas pipeline leak reported near apartment complex fire department alerted,0,0,0,0,0,1,0,0,High
+drain water stagnating around electric pole base potential hazard,0,1,0,0,0,0,1,0,High
+rainwater harvesting filter system in park area choked needs cleaning,0,0,0,0,0,0,0,1,Low
+damaged median strip with exposed iron rods on highway dangerous,1,0,0,0,0,0,0,0,High
+all streetlights on ring road segment between km 5 and 8 are dead,0,1,0,0,0,0,0,0,High
+contaminated water from nearby industry mixing into municipal supply,0,0,1,0,0,0,0,0,High
+fish and meat market waste not being cleared daily extremely smelly,0,0,0,1,0,0,0,0,High
+accident black spot at curve on highway needs warning signs and barriers,1,0,0,0,1,0,0,0,High
+fire extinguishers in school expired no replacements provided,0,0,0,0,0,1,0,0,Medium
+storm drain outfall blocked by construction material causing backup,0,0,0,0,0,0,1,1,High
+entire low lying neighbourhood submerged during monsoon every single year,0,0,0,0,0,0,0,1,High
+mud road in our area turns into slush during rains impossible to walk,1,0,0,0,0,0,0,1,Medium
+electrical junction box on footpath is open and exposed very dangerous,0,1,0,0,0,1,0,0,High
+drinking water pipeline passes through sewage contaminated area,0,0,1,0,0,0,1,0,High
+hotel throwing food waste into roadside drain causing blockage and smell,0,0,0,1,0,0,1,0,High
+heavy vehicles using narrow residential road despite restriction sign,0,0,0,0,1,0,0,0,Medium
+wiring short circuit in community prayer hall could cause fire,0,0,0,0,0,1,0,0,High
+drainage canal embankment breached flooding agricultural land,0,0,0,0,0,0,1,1,High
+continuous waterlogging at bus stop passengers have to wade through,0,0,0,0,0,0,0,1,Medium
+bridge over drain has developed cracks vehicles crossing at own risk,1,0,0,0,0,0,1,0,High
+mercury lights replaced with LEDs but installation pending wires hanging,0,1,0,0,0,0,0,0,Medium
+we get air instead of water from taps pipeline has multiple leaks,0,0,1,0,0,0,0,0,High
+used syringes and medical waste found dumped near childrens park,0,0,0,1,0,0,0,0,High
+signal free corridor project causing massive traffic disruption for months,0,0,0,0,1,0,0,0,Medium
+spontaneous combustion of methane at garbage landfill site hazardous,0,0,0,1,0,1,0,0,High
+nullahs choked with solid waste sewage backing up in toilets,0,0,0,1,0,0,1,0,High
+rainwater mixed with sewage entering homes through ground floor toilets,0,0,0,0,0,0,1,1,High
+road along canal has no railing vehicles falling into canal,1,0,0,0,0,0,0,0,High
+solar panels on street light poles damaged not generating power lights off,0,1,0,0,0,0,0,0,Medium
+water supply has tiny worms visible when kept in glass jar,0,0,1,0,0,0,0,0,High
+green waste from tree trimming left on road for weeks blocking path,0,0,0,1,0,0,0,0,Medium
+school bus route has no traffic mirror at blind curve,0,0,0,0,1,0,0,0,High
+transformer oil leak near playground potential fire and health hazard,0,1,0,0,0,1,0,0,High
+main sewer line collapsed entire colony sewage has no where to go,0,0,0,0,0,0,1,0,High
+fields near river flooded destroying crops due to blocked rain drain outlet,0,0,0,0,0,0,0,1,High
+pothole filled with water hiding its depth motorcycle rider got injured,1,0,0,0,0,0,0,0,High
+overhead wires sagging too low bus rooftop touching them sparking,0,1,0,0,0,1,0,0,High
+ground water depleted bore wells going dry need rain water harvesting policy,0,0,1,0,0,0,0,1,Medium
+vegetable market waste swept into gutter causing permanent blockage,0,0,0,1,0,0,1,0,Medium
+highway without divider causing head on collision accidents frequently,1,0,0,0,1,0,0,0,High
+fire station key staff shortage response time affected badly,0,0,0,0,0,1,0,0,Medium
+oxidation pond for sewage overflowing into nearby residential area,0,0,0,0,0,0,1,0,High
+persistent flooding in basement after every rain ruining stored goods,0,0,0,0,0,0,0,1,High
+collapsed retaining wall exposing road foundation to rain erosion,1,0,0,0,0,0,0,1,High
+led panel lights on major bridge going on and off erratically,0,1,0,0,0,0,0,0,Low
+water distribution valve leaking for weeks creating permanent puddle,0,0,1,0,0,0,0,0,Medium
+tannery waste being dumped into river course polluting downstream,0,0,0,1,0,0,0,0,High
+unmarked road diversion at night causing wrong way driving incidents,1,0,0,0,1,0,0,0,High
+electrical fire risk in slum area due to illegal hooking of power lines,0,1,0,0,0,1,0,0,High
+septic tank of public toilet seeping into nearby water well,0,0,1,0,0,0,1,0,High
+annual drain desilting not done this year flooding expected during rains,0,0,0,0,0,0,1,1,Medium
+uneven road surface after utility trench poorly backfilled,1,0,0,0,0,0,0,0,Medium
+exposed cables on light pole junction box electrocution hazard,0,1,0,0,0,0,0,0,High
+borewell motor burnt out no water in taps for entire apartment,0,0,1,0,0,0,0,0,High
+illegal dumping of debris filling up natural water channel,0,0,0,1,0,0,0,1,High
+traffic marshal needed at five road intersection accidents regular,0,0,0,0,1,0,0,0,High
+dry vegetation near power substation fire risk during summer,0,0,0,0,0,1,0,0,Medium
+open drain running parallel to main road odour affecting shops,0,0,0,0,0,0,1,0,Medium
+urban flooding caused by encroachment over natural drainage path,0,0,0,0,0,0,1,1,High
+concrete road has expanded and buckled creating dangerous bump,1,0,0,0,0,0,0,0,High
+three streetlights in a row not working near ATM kiosk robbery risk,0,1,0,0,0,0,0,0,High
+raw water supply pipeline corroded contaminating treated water,0,0,1,0,0,0,0,0,High
+tyres and old mattresses dumped near railway track fire hazard,0,0,0,1,0,1,0,0,Medium
+no yielding sign at roundabout causing frequent fender benders,0,0,0,0,1,0,0,0,Medium
+warehouse storing chemicals has no fire safety clearance certificate,0,0,0,0,0,1,0,0,High
+outlet of rainwater culvert blocked by silt massive flooding upstream,0,0,0,0,0,0,1,1,High
+water ankle deep on road three days after rain still not drained,0,0,0,0,0,0,0,1,Medium
+speed breakers not painted white vehicles cant see them at night,1,1,0,0,0,0,0,0,Medium
+junction box sparking near playground during rain dangerous for kids,0,1,0,0,0,1,0,0,High
+overhead water tank of colony leaking significant water wastage daily,0,0,1,0,0,0,0,0,Medium
+carcass disposal by municipal workers improper attracting vultures and stench,0,0,0,1,0,0,0,0,High
+traffic barricades left after event obstructing two lanes of road,0,0,0,0,1,0,0,0,Low
+kerosene spill near apartment fire risk if not cleaned immediately,0,0,0,0,0,1,0,0,High
+silted up catch basin not trapping debris flowing into main sewer,0,0,0,0,0,0,1,0,Medium
+perennial waterlogging at intersection turns road into pond after rain,0,0,0,0,0,0,0,1,High
+construction rubble dumped on road side no clearance attempted,0,0,0,1,0,0,0,0,Medium
+insufficient lighting near ATM and bank branch security concern,0,1,0,0,0,0,0,0,High
+water treatment plant producing water with unacceptable turbidity levels,0,0,1,0,0,0,0,0,High
+illegal garbage transfer station operating near apartment emitting odour,0,0,0,1,0,0,0,0,High
+uncontrolled intersection needs at minimum a blinker light,0,0,0,0,1,0,0,0,Medium
+high tension wire sagging close to building rooftop fire and shock risk,0,1,0,0,0,1,0,0,High
+box drain collapsed revealing deep cavity on footpath pedestrians at risk,0,0,0,0,0,0,1,0,High
+monsoon water entering transformer room could cause explosion,0,1,0,0,0,1,0,1,High
+damaged road surface near toll booth trucks getting stuck daily,1,0,0,0,0,0,0,0,Medium
+flickering high mast light at stadium affecting evening sports activities,0,1,0,0,0,0,0,0,Low
+mixed sewage and rain water flowing on road foul smell unbearable,0,0,0,0,0,0,1,1,High
+bio waste from clinic found openly dumped in public dustbin,0,0,0,1,0,0,0,0,High
+broken traffic signal pole lying on road divider hazard for bikers,0,0,0,0,1,0,0,0,High
+diesel generator exhaust near bedroom windows causing health issues,0,0,0,0,0,1,0,0,Medium
+choked drainage manhole cover overflowing at multiple points in colony,0,0,0,0,0,0,1,0,High
+rainwater collected in abandoned building foundation dengue concern,0,0,0,0,0,0,0,1,Medium
+the side road we use for market access has completely disintegrated stones showing,1,0,0,0,0,0,0,0,Medium
+night patrol impossible due to no street illumination in outskirts area,0,1,0,0,0,0,0,0,High
+please check water quality in our bore well children falling sick frequently,0,0,1,0,0,0,0,0,High
+massive garbage mound near railway station eyesore for tourists,0,0,0,1,0,0,0,0,Medium
+no right turn filter arrow at signal causing delays during non peak hours,0,0,0,0,1,0,0,0,Low
+smell of burning plastic coming from garbage processing unit near colony,0,0,0,1,0,1,0,0,Medium
+drain behind the temple discharges directly into lake polluting water body,0,0,0,0,0,0,1,0,High
+seasonal flooding ruins our shops every year when will permanent fix come,0,0,0,0,0,0,0,1,High
+road tar came off during rain exposing concrete base vehicles skidding,1,0,0,0,0,0,0,0,High
+hanging electric cables near temple tree could break and fall on people,0,1,0,0,0,1,0,0,High
+water pipeline passing under garbage dump contamination likely,0,0,1,1,0,0,0,0,High
+daily garbage burning by neighbourhood residents smoke everywhere,0,0,0,1,0,1,0,0,Medium
+narrow lane traffic both ways needs to be made one way,0,0,0,0,1,0,0,0,Medium
+fire tender could not reach building due to narrow lanes parked vehicles,0,0,0,0,1,1,0,0,High
+drain water black and sticky clearly has chemical discharge from factory,0,0,0,0,0,0,1,0,High
+ground floor shops flooded with 2 feet rainwater goods damaged heavily,0,0,0,0,0,0,0,1,High
