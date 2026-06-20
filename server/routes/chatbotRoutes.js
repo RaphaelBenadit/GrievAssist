@@ -274,13 +274,13 @@ router.post("/gemini", async (req, res) => {
 - For technical issues, advise users to contact support at support@grievassist.com.
 - ALWAYS maintain a professional, empathetic, and civic-minded tone.`;
 
-    // Models to try (ordered by preference)
+    // Models to try (ordered by preference — lightest first to avoid quota issues)
     const modelsToTry = [
+        "gemini-2.5-flash-lite",
+        "gemini-2.0-flash-lite",
+        "gemini-2.5-flash",
         "gemini-2.0-flash",
-        "gemini-2.0-flash-exp",
-        "gemini-1.5-flash",
-        "gemini-1.5-flash-8b",
-        "gemini-1.5-pro"
+        "gemini-2.5-pro"
     ];
 
     for (const model of modelsToTry) {
