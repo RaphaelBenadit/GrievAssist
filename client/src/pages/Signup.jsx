@@ -88,7 +88,7 @@ function Signup() {
     return { strength, label: labels[strength], color: colors[strength] };
   };
 
-  const passwordStrength = getPasswordStrength(formData.password);
+  const pwStrength = getPasswordStrength(formData.password);
 
   // Benefits list
   const benefits = [
@@ -253,13 +253,13 @@ function Signup() {
                         {[1, 2, 3, 4].map((level) => (
                           <div
                             key={level}
-                            className={`h-1 flex-1 rounded-full transition-all ${level <= passwordStrength.strength ? passwordStrength.color : 'bg-white/10'
+                            className={`h-1 flex-1 rounded-full transition-all ${level <= pwStrength.strength ? pwStrength.color : 'bg-white/10'
                               }`}
                           />
                         ))}
                       </div>
                       <p className="text-xs text-[#64748B]">
-                        Password strength: <span className={passwordStrength.strength >= 3 ? 'text-[#1B6B3A]' : 'text-[#4A8AB5]'}>{passwordStrength.label}</span>
+                        Password strength: <span className={pwStrength.strength >= 3 ? 'text-[#1B6B3A]' : 'text-[#4A8AB5]'}>{pwStrength.label}</span>
                       </p>
                     </div>
                   )}
